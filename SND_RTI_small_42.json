@@ -1,0 +1,733 @@
+{
+  "name": "SND_RTI_small_42",
+  "size_class": "small",
+  "seed": 42,
+  "L": 500,
+  "plants": [
+    {
+      "id": 0,
+      "x": 214.77,
+      "y": 429.05,
+      "zone_id": 0,
+      "is_large": true,
+      "is_hub": true
+    },
+    {
+      "id": 1,
+      "x": 206.85,
+      "y": 442.28,
+      "zone_id": 0,
+      "is_large": true,
+      "is_hub": false
+    },
+    {
+      "id": 2,
+      "x": 230.92,
+      "y": 430.27,
+      "zone_id": 0,
+      "is_large": false,
+      "is_hub": false
+    },
+    {
+      "id": 3,
+      "x": 236.07,
+      "y": 436.2,
+      "zone_id": 0,
+      "is_large": false,
+      "is_hub": false
+    },
+    {
+      "id": 4,
+      "x": 206.76,
+      "y": 434.74,
+      "zone_id": 0,
+      "is_large": false,
+      "is_hub": false
+    },
+    {
+      "id": 5,
+      "x": 205.29,
+      "y": 442.26,
+      "zone_id": 0,
+      "is_large": false,
+      "is_hub": false
+    },
+    {
+      "id": 6,
+      "x": 340.98,
+      "y": 60.92,
+      "zone_id": 1,
+      "is_large": true,
+      "is_hub": true
+    },
+    {
+      "id": 7,
+      "x": 346.94,
+      "y": 42.24,
+      "zone_id": 1,
+      "is_large": true,
+      "is_hub": false
+    },
+    {
+      "id": 8,
+      "x": 344.7,
+      "y": 53.11,
+      "zone_id": 1,
+      "is_large": false,
+      "is_hub": false
+    },
+    {
+      "id": 9,
+      "x": 352.82,
+      "y": 51.76,
+      "zone_id": 1,
+      "is_large": false,
+      "is_hub": false
+    }
+  ],
+  "zones": [
+    {
+      "zone_id": 0,
+      "cx": 219.43921987602616,
+      "cy": 429.2989599556912,
+      "plant_ids": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n_large": "2",
+      "n_small": "4"
+    },
+    {
+      "zone_id": 1,
+      "cx": 348.684014529682,
+      "cy": 47.088673943824766,
+      "plant_ids": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "n_large": "2",
+      "n_small": "2"
+    }
+  ],
+  "routes": [
+    {
+      "origin": 8,
+      "destination": 0,
+      "products": [
+        1
+      ],
+      "demand": {
+        "1": 8
+      },
+      "inlay_frac": {
+        "1": 0.241
+      },
+      "distance": 397.76
+    },
+    {
+      "origin": 7,
+      "destination": 0,
+      "products": [
+        4,
+        1
+      ],
+      "demand": {
+        "4": 17,
+        "1": 15
+      },
+      "inlay_frac": {
+        "4": 0.042,
+        "1": 0.002
+      },
+      "distance": 408.76
+    },
+    {
+      "origin": 6,
+      "destination": 0,
+      "products": [
+        3,
+        4
+      ],
+      "demand": {
+        "3": 5,
+        "4": 9
+      },
+      "inlay_frac": {
+        "3": 0.234,
+        "4": 0.171
+      },
+      "distance": 389.16
+    },
+    {
+      "origin": 5,
+      "destination": 0,
+      "products": [
+        0
+      ],
+      "demand": {
+        "0": 23
+      },
+      "inlay_frac": {
+        "0": 0.201
+      },
+      "distance": 16.26
+    },
+    {
+      "origin": 7,
+      "destination": 1,
+      "products": [
+        3
+      ],
+      "demand": {
+        "3": 9
+      },
+      "inlay_frac": {
+        "3": 0.235
+      },
+      "distance": 423.85
+    },
+    {
+      "origin": 9,
+      "destination": 1,
+      "products": [
+        4,
+        2
+      ],
+      "demand": {
+        "4": 14,
+        "2": 9
+      },
+      "inlay_frac": {
+        "4": 0.05,
+        "2": 0.027
+      },
+      "distance": 416.9
+    },
+    {
+      "origin": 3,
+      "destination": 2,
+      "products": [
+        4
+      ],
+      "demand": {
+        "4": 3
+      },
+      "inlay_frac": {
+        "4": 0.289
+      },
+      "distance": 7.85
+    },
+    {
+      "origin": 4,
+      "destination": 2,
+      "products": [
+        0
+      ],
+      "demand": {
+        "0": 10
+      },
+      "inlay_frac": {
+        "0": 0.21
+      },
+      "distance": 24.57
+    },
+    {
+      "origin": 7,
+      "destination": 3,
+      "products": [
+        4
+      ],
+      "demand": {
+        "4": 8
+      },
+      "inlay_frac": {
+        "4": 0.216
+      },
+      "distance": 409.26
+    },
+    {
+      "origin": 5,
+      "destination": 3,
+      "products": [
+        3
+      ],
+      "demand": {
+        "3": 8
+      },
+      "inlay_frac": {
+        "3": 0.175
+      },
+      "distance": 31.37
+    },
+    {
+      "origin": 8,
+      "destination": 3,
+      "products": [
+        2
+      ],
+      "demand": {
+        "2": 6
+      },
+      "inlay_frac": {
+        "2": 0.025
+      },
+      "distance": 398.19
+    },
+    {
+      "origin": 1,
+      "destination": 3,
+      "products": [
+        3
+      ],
+      "demand": {
+        "3": 9
+      },
+      "inlay_frac": {
+        "3": 0.148
+      },
+      "distance": 29.85
+    },
+    {
+      "origin": 2,
+      "destination": 4,
+      "products": [
+        4
+      ],
+      "demand": {
+        "4": 5
+      },
+      "inlay_frac": {
+        "4": 0.104
+      },
+      "distance": 24.57
+    },
+    {
+      "origin": 7,
+      "destination": 4,
+      "products": [
+        3
+      ],
+      "demand": {
+        "3": 6
+      },
+      "inlay_frac": {
+        "3": 0.288
+      },
+      "distance": 416.78
+    },
+    {
+      "origin": 2,
+      "destination": 5,
+      "products": [
+        4
+      ],
+      "demand": {
+        "4": 4
+      },
+      "inlay_frac": {
+        "4": 0.156
+      },
+      "distance": 28.29
+    },
+    {
+      "origin": 0,
+      "destination": 5,
+      "products": [
+        1
+      ],
+      "demand": {
+        "1": 5
+      },
+      "inlay_frac": {
+        "1": 0.006
+      },
+      "distance": 16.26
+    },
+    {
+      "origin": 0,
+      "destination": 6,
+      "products": [
+        4,
+        3
+      ],
+      "demand": {
+        "4": 7,
+        "3": 31
+      },
+      "inlay_frac": {
+        "4": 0.166,
+        "3": 0.249
+      },
+      "distance": 389.16
+    },
+    {
+      "origin": 1,
+      "destination": 6,
+      "products": [
+        4
+      ],
+      "demand": {
+        "4": 7
+      },
+      "inlay_frac": {
+        "4": 0.286
+      },
+      "distance": 404.25
+    },
+    {
+      "origin": 9,
+      "destination": 6,
+      "products": [
+        1,
+        3
+      ],
+      "demand": {
+        "1": 11,
+        "3": 14
+      },
+      "inlay_frac": {
+        "1": 0.281,
+        "3": 0.013
+      },
+      "distance": 14.97
+    },
+    {
+      "origin": 4,
+      "destination": 6,
+      "products": [
+        2
+      ],
+      "demand": {
+        "2": 6
+      },
+      "inlay_frac": {
+        "2": 0.268
+      },
+      "distance": 397.18
+    },
+    {
+      "origin": 8,
+      "destination": 7,
+      "products": [
+        3,
+        1
+      ],
+      "demand": {
+        "3": 11,
+        "1": 13
+      },
+      "inlay_frac": {
+        "3": 0.043,
+        "1": 0.069
+      },
+      "distance": 11.1
+    },
+    {
+      "origin": 6,
+      "destination": 7,
+      "products": [
+        0
+      ],
+      "demand": {
+        "0": 15
+      },
+      "inlay_frac": {
+        "0": 0.037
+      },
+      "distance": 19.61
+    },
+    {
+      "origin": 0,
+      "destination": 7,
+      "products": [
+        2
+      ],
+      "demand": {
+        "2": 7
+      },
+      "inlay_frac": {
+        "2": 0.174
+      },
+      "distance": 408.76
+    },
+    {
+      "origin": 4,
+      "destination": 7,
+      "products": [
+        0
+      ],
+      "demand": {
+        "0": 9
+      },
+      "inlay_frac": {
+        "0": 0.215
+      },
+      "distance": 416.78
+    },
+    {
+      "origin": 1,
+      "destination": 7,
+      "products": [
+        3
+      ],
+      "demand": {
+        "3": 11
+      },
+      "inlay_frac": {
+        "3": 0.037
+      },
+      "distance": 423.85
+    },
+    {
+      "origin": 7,
+      "destination": 8,
+      "products": [
+        0
+      ],
+      "demand": {
+        "0": 6
+      },
+      "inlay_frac": {
+        "0": 0.14
+      },
+      "distance": 11.1
+    },
+    {
+      "origin": 6,
+      "destination": 8,
+      "products": [
+        4
+      ],
+      "demand": {
+        "4": 5
+      },
+      "inlay_frac": {
+        "4": 0.005
+      },
+      "distance": 8.65
+    },
+    {
+      "origin": 9,
+      "destination": 8,
+      "products": [
+        3
+      ],
+      "demand": {
+        "3": 4
+      },
+      "inlay_frac": {
+        "3": 0.239
+      },
+      "distance": 8.23
+    },
+    {
+      "origin": 0,
+      "destination": 8,
+      "products": [
+        0
+      ],
+      "demand": {
+        "0": 1
+      },
+      "inlay_frac": {
+        "0": 0.159
+      },
+      "distance": 397.76
+    },
+    {
+      "origin": 6,
+      "destination": 9,
+      "products": [
+        1
+      ],
+      "demand": {
+        "1": 29
+      },
+      "inlay_frac": {
+        "1": 0.093
+      },
+      "distance": 14.97
+    },
+    {
+      "origin": 2,
+      "destination": 9,
+      "products": [
+        0
+      ],
+      "demand": {
+        "0": 6
+      },
+      "inlay_frac": {
+        "0": 0.276
+      },
+      "distance": 397.66
+    },
+    {
+      "origin": 5,
+      "destination": 9,
+      "products": [
+        2
+      ],
+      "demand": {
+        "2": 5
+      },
+      "inlay_frac": {
+        "2": 0.046
+      },
+      "distance": 417.44
+    },
+    {
+      "origin": 8,
+      "destination": 9,
+      "products": [
+        0
+      ],
+      "demand": {
+        "0": 2
+      },
+      "inlay_frac": {
+        "0": 0.006
+      },
+      "distance": 8.23
+    }
+  ],
+  "hub_ids": [
+    0,
+    6
+  ],
+  "n_rti_types": 2,
+  "n_products": "5",
+  "n_modes": 2,
+  "product_rti_compat": {
+    "0": [
+      0,
+      1
+    ],
+    "1": [
+      0,
+      1
+    ],
+    "2": [
+      1
+    ],
+    "3": [
+      0
+    ],
+    "4": [
+      1
+    ]
+  },
+  "v_full": [
+    0.726,
+    0.322
+  ],
+  "v_empty": [
+    0.1844,
+    0.0873
+  ],
+  "p_rti": [
+    52.44,
+    81.41
+  ],
+  "s_rti": [
+    0,
+    0
+  ],
+  "alpha_f": [
+    0.0325,
+    0.0215
+  ],
+  "alpha_e": [
+    0.0312,
+    0.0357
+  ],
+  "modes": [
+    "FTL",
+    "LTL"
+  ],
+  "q_bounds": {
+    "FTL": [
+      3,
+      10
+    ],
+    "LTL": [
+      1,
+      5
+    ]
+  },
+  "fhc": {
+    "0": 230.5,
+    "6": 215.59
+  },
+  "vhc": {
+    "0": 1.75,
+    "6": 1.887
+  },
+  "ss_days": 3,
+  "params": {
+    "sigma_intra": [
+      5,
+      15
+    ],
+    "k_avg_suppliers": [
+      2,
+      4
+    ],
+    "p_inter": 0.7,
+    "p_intra": 0.7,
+    "mu_d": 2.0,
+    "sigma_d": 0.8,
+    "r_max": 0.3,
+    "c_ftl": 0.05,
+    "c_ltl": 0.12,
+    "f_ftl": 150.0,
+    "f_ltl": 40.0,
+    "delta_ftl": 80.0,
+    "delta_ltl": 30.0,
+    "omega_ftl": 40.0,
+    "omega_ltl": 5.0,
+    "v_avg": 500.0,
+    "d_ftl_min": 50.0,
+    "d_ltl_max": 800.0,
+    "q_min_ftl": 3,
+    "q_max_ftl": 10,
+    "q_min_ltl": 1,
+    "q_max_ltl": 5,
+    "v_full_range": [
+      0.3,
+      0.8
+    ],
+    "fold_ratio_range": [
+      0.2,
+      0.5
+    ],
+    "p_rti_range": [
+      30,
+      120
+    ],
+    "s_rti": 0,
+    "ss_days": 3,
+    "alpha_f_range": [
+      0.02,
+      0.05
+    ],
+    "alpha_e_range": [
+      0.02,
+      0.05
+    ],
+    "fhc_range": [
+      200,
+      500
+    ],
+    "vhc_range": [
+      0.5,
+      2.0
+    ]
+  }
+}

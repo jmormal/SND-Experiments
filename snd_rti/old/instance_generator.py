@@ -1,32 +1,5 @@
-"""
-SND-RTI Instance Generator
-===========================
-Generates random instances for the Service Network Design for
-Returnable Transport Items model. Produces a JSON instance file
-and a network plot.
-
-Usage:
-    python instance_generator.py --size small --seed 42 --plot
-    python instance_generator.py --size medium --seed 1 --plot --out instances/
-"""
-
-import argparse
-import json
-import os
+from classes_pydantic import Product, RTI, Mode, Plant, Hub, Zone, Edge, Network
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-from matplotlib.lines import Line2D
-from dataclasses import dataclass, field, asdict
-from typing import List, Dict, Tuple, Optional
-
-try:
-    import folium
-    from folium import plugins
-
-    HAS_FOLIUM = True
-except ImportError:
-    HAS_FOLIUM = False
 
 # ═══════════════════════════════════════════════════════════════════
 #  INSTANCE CLASS CONFIGURATION
@@ -70,7 +43,8 @@ INSTANCE_CONFIGS = {
 
 PARAMS = {
     "sigma_intra": (5, 15),
-    "k_avg_suppliers": (2, 4),
+    "k_avg_suppliers_large": (4, 6),
+    "k_avg_suppliers_small": (2, 4),
     "p_inter": 0.7,
     "p_intra": 0.7,
     "zone_importance_range": (0.5, 2.5),
@@ -95,63 +69,10 @@ PARAMS = {
     "q_min_ltl": 1,
     "q_max_ltl": 5,
     "v_full_range": (0.3, 0.8),
-    "fold_ratio_range": (0.2, 0.5),
     "p_rti_range": (30, 120),
-    "s_rti": 0,
-    "ss_days": 3,
-    "alpha_f_range": (0.02, 0.05),
-    "alpha_e_range": (0.02, 0.05),
     "fhc_range": (200, 500),
     "vhc_range": (0.5, 2.0),
 }
-
-
-@dataclass
-class Plant:
-    id: int
-    x: float
-    y: float
-    zone_id: int
-    is_large: bool
-    is_hub: bool = False
-
-
-@dataclass
-class Route:
-    origin: int
-    destination: int
-    products: List[int]
-    demand: Dict[int, float]
-    inlay_frac: Dict[int, float]
-    distance: float
-
-
-@dataclass
-class Instance:
-    name: str
-    size_class: str
-    seed: int
-    L: float
-    plants: List[dict]
-    zones: List[dict]
-    routes: List[dict]
-    hub_ids: List[int]
-    n_rti_types: int
-    n_products: int
-    n_modes: int
-    product_rti_compat: Dict[int, List[int]]
-    v_full: List[float]
-    v_empty: List[float]
-    p_rti: List[float]
-    s_rti: List[int]
-    alpha_f: List[float]
-    alpha_e: List[float]
-    modes: List[str]
-    q_bounds: Dict[str, Tuple[int, int]]
-    fhc: Dict[int, float]
-    vhc: Dict[int, float]
-    ss_days: int
-    params: dict
 
 
 def _sample_range(rng, r, as_int=True):
@@ -175,10 +96,19 @@ def generate_instance(size: str, seed: int):
     n_zones = _sample_range(rng, cfg["n_zones"])
     zone_centres = [(rng.uniform(0, L), rng.uniform(0, L)) for _ in range(n_zones)]
 
-    plants: List[Plant] = []
+    products: dict[str, Product] = {}
+    rtis: dict[int, RTI] = {}
+    plants: dict[int, Plant] = {}
+    hubs: dict[int, Hub] = {}
+    zones: dict[int, Zone] = {}
+    modes: dict[int, Mode] = {}
+    edges: dict[int, Edge] = {}
+
     hub_ids = []
     zone_info = []
     pid = 0
+    hid = 0
+    zid = 0
     for z in range(n_zones):
         cx, cy = zone_centres[z]
         sigma = _sample_range(rng, PARAMS["sigma_intra"], as_int=False)
@@ -191,64 +121,58 @@ def generate_instance(size: str, seed: int):
         weight_out = round(importance * (1 - imbalance) * 2, 2)
         zone_plants = []
 
+        zone_hubs = []
         for _ in range(n_large):
             px = np.clip(cx + rng.normal(0, sigma), 0, L)
             py = np.clip(cy + rng.normal(0, sigma), 0, L)
-            plants.append(Plant(id=pid, x=px, y=py, zone_id=z, is_large=True))
-            zone_plants.append(pid)
+            plants[pid] = Plant(id=pid, x=px, y=py, zone_id=zid, is_large=False)
             pid += 1
         for _ in range(n_small):
             px = np.clip(cx + rng.normal(0, sigma), 0, L)
             py = np.clip(cy + rng.normal(0, sigma), 0, L)
-            plants.append(Plant(id=pid, x=px, y=py, zone_id=z, is_large=False))
+            plants[pid] = Plant(id=pid, x=px, y=py, zone_id=zid, is_large=False)
             zone_plants.append(pid)
             pid += 1
         for _ in range(n_hubs):
             px = np.clip(cx + rng.normal(0, sigma), 0, L)
             py = np.clip(cy + rng.normal(0, sigma), 0, L)
-            plants.append(
-                Plant(id=pid, x=px, y=py, zone_id=z, is_large=False, is_hub=True)
-            )
-            zone_plants.append(pid)
+            hubs[hid] = Hub(id=pid, x=px, y=py, zone_id=zid)
+            zone_hubs.append(pid)
             hub_ids.append(pid)
-            pid += 1
-        zone_info.append(
-            {
-                "zone_id": z,
-                "cx": cx,
-                "cy": cy,
-                "importance": importance,
-                "weight_in": weight_in,
-                "weight_out": weight_out,
-                "plant_ids": zone_plants,
-                "n_large": n_large,
-                "n_small": n_small,
-                "n_hubs": n_hubs,
-            }
+            hid += 1
+
+        zones[zid] = Zone(
+            id=zid,
+            x=cx,
+            y=cy,
+            importance=importance,
+            weight_in=weight_in,
+            weight_out=weight_out,
+            plants=zone_plants,
+            hubs=zone_hubs,
         )
+        zid += 1
 
     n_plants = len(plants)
-    k_avg = _sample_range(rng, PARAMS["k_avg_suppliers"])
-    routes: List[Route] = []
+    k_avg_large = _sample_range(rng, PARAMS["k_avg_suppliers_large"])
+    k_avg_small = _sample_range(rng, PARAMS["k_avg_suppliers_smnall"])
     n_products = _sample_range(rng, cfg["n_products"])
 
-    for j_plant in plants:
-        if j_plant.is_hub:
-            continue
-        w_in = zone_info[j_plant.zone_id]["weight_in"]
+    for j_plant in plants.values():
+        if j_plant.is_large:
+            k_avg = k_avg_large
+        else:
+            k_avg = k_avg_small
+
+        zone = zones[j_plant.zone_id]
+        w_in = zones[zid].weight_out
         n_suppliers = max(1, rng.poisson(k_avg * w_in))
-        n_suppliers = min(n_suppliers, n_plants - len(hub_ids) - 1)
-        same_zone = [
-            p
-            for p in plants
-            if p.zone_id == j_plant.zone_id and p.id != j_plant.id and not p.is_hub
-        ]
-        other_zone = [
-            p for p in plants if p.zone_id != j_plant.zone_id and not p.is_hub
-        ]
+        n_suppliers = min(n_suppliers, n_plants - 1)
+        same_zone = zone.plants
+        other_zone = [p for p in plants.values() if p.zone_id != zone.id]
         p_inter = PARAMS["p_inter"] if j_plant.is_large else 1.0 - PARAMS["p_intra"]
         if len(other_zone) > 0:
-            ow = np.array([zone_info[p.zone_id]["weight_out"] for p in other_zone])
+            ow = np.array([zones[p.zone_id].weight_out for p in other_zone])
             op = (
                 ow / ow.sum()
                 if ow.sum() > 0
@@ -257,7 +181,7 @@ def generate_instance(size: str, seed: int):
         else:
             op = None
         if len(same_zone) > 0:
-            sw = np.array([zone_info[p.zone_id]["weight_out"] for p in same_zone])
+            sw = np.array([zones[p.zone_id].weight_out for p in same_zone])
             sp = (
                 sw / sw.sum()
                 if sw.sum() > 0
@@ -429,3 +353,13 @@ def main():
 
 if __name__ == "__main__":
     main()
+# Products.
+
+# Modes
+
+# RTis
+
+
+# First we generate the zones.
+
+# The zone determines the type of plant.

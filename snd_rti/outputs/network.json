@@ -2,11 +2,13 @@
   "products": {
     "Beer": {
       "name": "Beer",
-      "category": "Beverage"
+      "category": "Beverage",
+      "volume": 0.0
     },
     "Juice": {
       "name": "Juice",
-      "category": "Beverage"
+      "category": "Beverage",
+      "volume": 0.0
     }
   },
   "rtis": {
@@ -56,13 +58,15 @@
       "id": 1,
       "x": 40.0,
       "y": 50.0,
-      "is_large": true
+      "is_large": true,
+      "zone_id": 0
     },
     "2": {
       "id": 2,
       "x": 60.0,
       "y": 70.0,
-      "is_large": false
+      "is_large": false,
+      "zone_id": 0
     }
   },
   "hubs": {
@@ -70,17 +74,21 @@
       "id": 1,
       "x": 45.0,
       "y": 55.0,
-      "zone_id": 1,
-      "fixed_cost": 10000.0,
-      "variable_cost": 2.5
+      "fixed_economic_cost_per_volume": 0,
+      "fixed_co2_cost_per_volume": 0,
+      "variable_economic_cost_per_volume": 0,
+      "variable_co2_cost_per_volume": 0,
+      "zone_id": 1
     },
     "2": {
       "id": 2,
       "x": 65.0,
       "y": 75.0,
-      "zone_id": 2,
-      "fixed_cost": 8000.0,
-      "variable_cost": 3.0
+      "fixed_economic_cost_per_volume": 0,
+      "fixed_co2_cost_per_volume": 0,
+      "variable_economic_cost_per_volume": 0,
+      "variable_co2_cost_per_volume": 0,
+      "zone_id": 2
     }
   },
   "zones": {
@@ -88,12 +96,16 @@
       "id": 1,
       "x": 42.0,
       "y": 52.0,
+      "importance": 0,
+      "weight_in": 0,
+      "weight_out": 0,
       "plants": [
         {
           "id": 1,
           "x": 40.0,
           "y": 50.0,
-          "is_large": true
+          "is_large": true,
+          "zone_id": 0
         }
       ],
       "hubs": [
@@ -101,9 +113,11 @@
           "id": 1,
           "x": 45.0,
           "y": 55.0,
-          "zone_id": 1,
-          "fixed_cost": 10000.0,
-          "variable_cost": 2.5
+          "fixed_economic_cost_per_volume": 0,
+          "fixed_co2_cost_per_volume": 0,
+          "variable_economic_cost_per_volume": 0,
+          "variable_co2_cost_per_volume": 0,
+          "zone_id": 1
         }
       ]
     },
@@ -111,12 +125,16 @@
       "id": 2,
       "x": 62.0,
       "y": 72.0,
+      "importance": 0,
+      "weight_in": 0,
+      "weight_out": 0,
       "plants": [
         {
           "id": 2,
           "x": 60.0,
           "y": 70.0,
-          "is_large": false
+          "is_large": false,
+          "zone_id": 0
         }
       ],
       "hubs": [
@@ -124,9 +142,11 @@
           "id": 2,
           "x": 65.0,
           "y": 75.0,
-          "zone_id": 2,
-          "fixed_cost": 8000.0,
-          "variable_cost": 3.0
+          "fixed_economic_cost_per_volume": 0,
+          "fixed_co2_cost_per_volume": 0,
+          "variable_economic_cost_per_volume": 0,
+          "variable_co2_cost_per_volume": 0,
+          "zone_id": 2
         }
       ]
     }
@@ -137,14 +157,22 @@
       "max_vol": 100.0,
       "min_vol": 10.0,
       "min_q": 1.0,
-      "max_q": 20.0
+      "max_q": 20.0,
+      "fixed_environmental_cost": 1,
+      "fixed_economical_cost": 1,
+      "economic_cost_per_km": 1,
+      "environmental_cost_per_km": 1
     },
     "2": {
       "id": 2,
       "max_vol": 500.0,
       "min_vol": 50.0,
       "min_q": 5.0,
-      "max_q": 100.0
+      "max_q": 100.0,
+      "fixed_environmental_cost": 1,
+      "fixed_economical_cost": 1,
+      "economic_cost_per_km": 1,
+      "environmental_cost_per_km": 1
     }
   },
   "edges": {
@@ -155,27 +183,33 @@
         "id": 1,
         "x": 40.0,
         "y": 50.0,
-        "is_large": true
+        "is_large": true,
+        "zone_id": 0
       },
       "target": {
         "type": "Hub",
         "id": 1,
         "x": 45.0,
         "y": 55.0,
-        "zone_id": 1,
-        "fixed_cost": 10000.0,
-        "variable_cost": 2.5
+        "fixed_economic_cost_per_volume": 0,
+        "fixed_co2_cost_per_volume": 0,
+        "variable_economic_cost_per_volume": 0,
+        "variable_co2_cost_per_volume": 0,
+        "zone_id": 1
       },
       "zone_id": 1,
       "demand": {
         "Beer": 200.0,
         "Juice": 150.0
       },
+      "safety_stock_empties": {},
+      "safety_stocks_fulls": {},
       "allowed_empties": [
         1,
         2
       ],
       "allowed_modes": [],
+      "lead_time": {},
       "fixed_economic_cost_per_volume": {
         "1": 5.0,
         "2": 3.0
@@ -200,27 +234,34 @@
         "id": 1,
         "x": 45.0,
         "y": 55.0,
-        "zone_id": 1,
-        "fixed_cost": 10000.0,
-        "variable_cost": 2.5
+        "fixed_economic_cost_per_volume": 0,
+        "fixed_co2_cost_per_volume": 0,
+        "variable_economic_cost_per_volume": 0,
+        "variable_co2_cost_per_volume": 0,
+        "zone_id": 1
       },
       "target": {
         "type": "Hub",
         "id": 2,
         "x": 65.0,
         "y": 75.0,
-        "zone_id": 2,
-        "fixed_cost": 8000.0,
-        "variable_cost": 3.0
+        "fixed_economic_cost_per_volume": 0,
+        "fixed_co2_cost_per_volume": 0,
+        "variable_economic_cost_per_volume": 0,
+        "variable_co2_cost_per_volume": 0,
+        "zone_id": 2
       },
       "zone_id": 2,
       "demand": {
         "Beer": 100.0
       },
+      "safety_stock_empties": {},
+      "safety_stocks_fulls": {},
       "allowed_empties": [
         1
       ],
       "allowed_modes": [],
+      "lead_time": {},
       "fixed_economic_cost_per_volume": {
         "1": 6.0
       },

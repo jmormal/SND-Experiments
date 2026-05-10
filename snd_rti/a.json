@@ -1,0 +1,1405 @@
+{
+  "products": {
+    "EngineBlock": {
+      "name": "EngineBlock",
+      "category": "Powertrain",
+      "volume": 0.0771
+    },
+    "DoorPanel": {
+      "name": "DoorPanel",
+      "category": "Body",
+      "volume": 0.2203
+    },
+    "SubFrame": {
+      "name": "SubFrame",
+      "category": "Chassis",
+      "volume": 0.0582
+    },
+    "Dashboard": {
+      "name": "Dashboard",
+      "category": "Interior",
+      "volume": 0.0185
+    },
+    "WiringHarness": {
+      "name": "WiringHarness",
+      "category": "Electronics",
+      "volume": 0.0293
+    }
+  },
+  "rtis": {
+    "0": {
+      "id": 0,
+      "name": "KLT-3214",
+      "type": "small_load_carrier",
+      "average_useful_life": 14.3,
+      "current_stock": 7924,
+      "product_capacity": {
+        "EngineBlock": 3.0
+      },
+      "return_inlay_fraction": {
+        "EngineBlock": 0.0
+      },
+      "length": 1.343,
+      "width": 0.415,
+      "full_height": 0.519,
+      "folded_height": 0.162,
+      "volume_full": 0.289262055,
+      "volume_folded": 0.09028989
+    },
+    "1": {
+      "id": 1,
+      "name": "KLT-4328",
+      "type": "small_load_carrier",
+      "average_useful_life": 5.6,
+      "current_stock": 6616,
+      "product_capacity": {
+        "DoorPanel": 1.0,
+        "SubFrame": 5.0,
+        "Dashboard": 17.0,
+        "WiringHarness": 11.0
+      },
+      "return_inlay_fraction": {
+        "DoorPanel": 0.0,
+        "SubFrame": 0.0,
+        "Dashboard": 0.123,
+        "WiringHarness": 0.0
+      },
+      "length": 1.387,
+      "width": 0.699,
+      "full_height": 0.336,
+      "folded_height": 0.123,
+      "volume_full": 0.325756368,
+      "volume_folded": 0.119250099
+    }
+  },
+  "plants": {
+    "0": {
+      "id": 0,
+      "x": 154.92,
+      "y": 191.54,
+      "is_large": true,
+      "zone_id": 0
+    },
+    "1": {
+      "id": 1,
+      "x": 170.12,
+      "y": 190.5,
+      "is_large": true,
+      "zone_id": 0
+    },
+    "2": {
+      "id": 2,
+      "x": 156.46,
+      "y": 187.48,
+      "is_large": false,
+      "zone_id": 0
+    },
+    "3": {
+      "id": 3,
+      "x": 164.04,
+      "y": 187.35,
+      "is_large": false,
+      "zone_id": 0
+    },
+    "4": {
+      "id": 4,
+      "x": 171.36,
+      "y": 187.4,
+      "is_large": false,
+      "zone_id": 0
+    },
+    "5": {
+      "id": 5,
+      "x": 169.5,
+      "y": 185.89,
+      "is_large": false,
+      "zone_id": 0
+    },
+    "6": {
+      "id": 6,
+      "x": 218.69,
+      "y": 282.23,
+      "is_large": true,
+      "zone_id": 1
+    },
+    "7": {
+      "id": 7,
+      "x": 230.5,
+      "y": 288.12,
+      "is_large": false,
+      "zone_id": 1
+    },
+    "8": {
+      "id": 8,
+      "x": 234.01,
+      "y": 289.45,
+      "is_large": false,
+      "zone_id": 1
+    }
+  },
+  "hubs": {
+    "0": {
+      "id": 0,
+      "x": 165.72,
+      "y": 191.35,
+      "fixed_cost": 411.55,
+      "variable_cost": 1.671,
+      "zone_id": 0
+    },
+    "1": {
+      "id": 1,
+      "x": 227.23,
+      "y": 281.41,
+      "fixed_cost": 264.38,
+      "variable_cost": 1.113,
+      "zone_id": 1
+    }
+  },
+  "zones": {
+    "0": {
+      "id": 0,
+      "x": 162.91,
+      "y": 185.23,
+      "importance": 0.76,
+      "weight_in": 0.74,
+      "weight_out": 0.78,
+      "plants": [
+        {
+          "id": 0,
+          "x": 154.92,
+          "y": 191.54,
+          "is_large": true,
+          "zone_id": 0
+        },
+        {
+          "id": 1,
+          "x": 170.12,
+          "y": 190.5,
+          "is_large": true,
+          "zone_id": 0
+        },
+        {
+          "id": 2,
+          "x": 156.46,
+          "y": 187.48,
+          "is_large": false,
+          "zone_id": 0
+        },
+        {
+          "id": 3,
+          "x": 164.04,
+          "y": 187.35,
+          "is_large": false,
+          "zone_id": 0
+        },
+        {
+          "id": 4,
+          "x": 171.36,
+          "y": 187.4,
+          "is_large": false,
+          "zone_id": 0
+        },
+        {
+          "id": 5,
+          "x": 169.5,
+          "y": 185.89,
+          "is_large": false,
+          "zone_id": 0
+        }
+      ],
+      "hubs": [
+        {
+          "id": 0,
+          "x": 165.72,
+          "y": 191.35,
+          "fixed_cost": 411.55,
+          "variable_cost": 1.671,
+          "zone_id": 0
+        }
+      ]
+    },
+    "1": {
+      "id": 1,
+      "x": 229.46,
+      "y": 284.37,
+      "importance": 1.84,
+      "weight_in": 1.78,
+      "weight_out": 1.9,
+      "plants": [
+        {
+          "id": 6,
+          "x": 218.69,
+          "y": 282.23,
+          "is_large": true,
+          "zone_id": 1
+        },
+        {
+          "id": 7,
+          "x": 230.5,
+          "y": 288.12,
+          "is_large": false,
+          "zone_id": 1
+        },
+        {
+          "id": 8,
+          "x": 234.01,
+          "y": 289.45,
+          "is_large": false,
+          "zone_id": 1
+        }
+      ],
+      "hubs": [
+        {
+          "id": 1,
+          "x": 227.23,
+          "y": 281.41,
+          "fixed_cost": 264.38,
+          "variable_cost": 1.113,
+          "zone_id": 1
+        }
+      ]
+    }
+  },
+  "modes": {
+    "0": {
+      "id": 0,
+      "max_vol": 100.0,
+      "min_vol": 10.0,
+      "min_q": 3.0,
+      "max_q": 10.0,
+      "fixed_environmental_cost": 45.33,
+      "fixed_economical_cost": 150.0,
+      "economic_cost_per_km": 0.05,
+      "environmental_cost_per_km": 0.0151
+    },
+    "1": {
+      "id": 1,
+      "max_vol": 30.0,
+      "min_vol": 0.5,
+      "min_q": 1.0,
+      "max_q": 5.0,
+      "fixed_environmental_cost": 12.09,
+      "fixed_economical_cost": 40.0,
+      "economic_cost_per_km": 0.12,
+      "environmental_cost_per_km": 0.0363
+    }
+  },
+  "edges": {
+    "0": {
+      "id": 0,
+      "source": {
+        "type": "Plant",
+        "id": 6,
+        "x": 218.69,
+        "y": 282.23,
+        "is_large": true,
+        "zone_id": 1
+      },
+      "target": {
+        "type": "Plant",
+        "id": 0,
+        "x": 154.92,
+        "y": 191.54,
+        "is_large": true,
+        "zone_id": 0
+      },
+      "zone_id": 0,
+      "demand": {
+        "Dashboard": 12.0,
+        "DoorPanel": 15.0
+      },
+      "safety_stock_empties": {
+        "Dashboard": 36.0,
+        "DoorPanel": 45.0
+      },
+      "safety_stocks_fulls": {
+        "Dashboard": 18.0,
+        "DoorPanel": 22.5
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        0,
+        1
+      ],
+      "lead_time": {
+        "0": 0.222,
+        "1": 0.222
+      },
+      "fixed_economic_cost_per_volume": {
+        "0": 155.54,
+        "1": 53.3
+      },
+      "fixed_co2_cost_per_volume": {
+        "0": 47.0041,
+        "1": 16.1146
+      },
+      "variable_economic_cost_per_volume": {
+        "0": 0.5544,
+        "1": 1.3304
+      },
+      "variable_co2_cost_per_volume": {
+        "0": 0.1674,
+        "1": 0.4025
+      }
+    },
+    "1": {
+      "id": 1,
+      "source": {
+        "type": "Plant",
+        "id": 8,
+        "x": 234.01,
+        "y": 289.45,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "target": {
+        "type": "Plant",
+        "id": 1,
+        "x": 170.12,
+        "y": 190.5,
+        "is_large": true,
+        "zone_id": 0
+      },
+      "zone_id": 0,
+      "demand": {
+        "Dashboard": 11.0,
+        "DoorPanel": 9.0
+      },
+      "safety_stock_empties": {
+        "Dashboard": 33.0,
+        "DoorPanel": 27.0
+      },
+      "safety_stocks_fulls": {
+        "Dashboard": 16.5,
+        "DoorPanel": 13.5
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        0,
+        1
+      ],
+      "lead_time": {
+        "0": 0.236,
+        "1": 0.236
+      },
+      "fixed_economic_cost_per_volume": {
+        "0": 155.89,
+        "1": 54.13
+      },
+      "fixed_co2_cost_per_volume": {
+        "0": 47.1085,
+        "1": 16.3654
+      },
+      "variable_economic_cost_per_volume": {
+        "0": 0.5889,
+        "1": 1.4134
+      },
+      "variable_co2_cost_per_volume": {
+        "0": 0.1778,
+        "1": 0.4275
+      }
+    },
+    "2": {
+      "id": 2,
+      "source": {
+        "type": "Plant",
+        "id": 6,
+        "x": 218.69,
+        "y": 282.23,
+        "is_large": true,
+        "zone_id": 1
+      },
+      "target": {
+        "type": "Plant",
+        "id": 1,
+        "x": 170.12,
+        "y": 190.5,
+        "is_large": true,
+        "zone_id": 0
+      },
+      "zone_id": 0,
+      "demand": {
+        "Dashboard": 5.0
+      },
+      "safety_stock_empties": {
+        "Dashboard": 15.0
+      },
+      "safety_stocks_fulls": {
+        "Dashboard": 7.5
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        0,
+        1
+      ],
+      "lead_time": {
+        "0": 0.208,
+        "1": 0.208
+      },
+      "fixed_economic_cost_per_volume": {
+        "0": 155.19,
+        "1": 52.46
+      },
+      "fixed_co2_cost_per_volume": {
+        "0": 46.8974,
+        "1": 15.8579
+      },
+      "variable_economic_cost_per_volume": {
+        "0": 0.519,
+        "1": 1.2456
+      },
+      "variable_co2_cost_per_volume": {
+        "0": 0.1567,
+        "1": 0.3768
+      }
+    },
+    "3": {
+      "id": 3,
+      "source": {
+        "type": "Plant",
+        "id": 5,
+        "x": 169.5,
+        "y": 185.89,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 2,
+        "x": 156.46,
+        "y": 187.48,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "zone_id": 0,
+      "demand": {
+        "Dashboard": 4.0
+      },
+      "safety_stock_empties": {
+        "Dashboard": 12.0
+      },
+      "safety_stocks_fulls": {
+        "Dashboard": 6.0
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.026
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 41.58
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.567
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.1577
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0477
+      }
+    },
+    "4": {
+      "id": 4,
+      "source": {
+        "type": "Plant",
+        "id": 8,
+        "x": 234.01,
+        "y": 289.45,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "target": {
+        "type": "Plant",
+        "id": 3,
+        "x": 164.04,
+        "y": 187.35,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "zone_id": 0,
+      "demand": {
+        "Dashboard": 8.0
+      },
+      "safety_stock_empties": {
+        "Dashboard": 24.0
+      },
+      "safety_stocks_fulls": {
+        "Dashboard": 12.0
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        0,
+        1
+      ],
+      "lead_time": {
+        "0": 0.248,
+        "1": 0.248
+      },
+      "fixed_economic_cost_per_volume": {
+        "0": 156.19,
+        "1": 54.85
+      },
+      "fixed_co2_cost_per_volume": {
+        "0": 47.1989,
+        "1": 16.5829
+      },
+      "variable_economic_cost_per_volume": {
+        "0": 0.6189,
+        "1": 1.4852
+      },
+      "variable_co2_cost_per_volume": {
+        "0": 0.1869,
+        "1": 0.4493
+      }
+    },
+    "5": {
+      "id": 5,
+      "source": {
+        "type": "Plant",
+        "id": 1,
+        "x": 170.12,
+        "y": 190.5,
+        "is_large": true,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 3,
+        "x": 164.04,
+        "y": 187.35,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "zone_id": 0,
+      "demand": {
+        "SubFrame": 27.0
+      },
+      "safety_stock_empties": {
+        "SubFrame": 81.0
+      },
+      "safety_stocks_fulls": {
+        "SubFrame": 40.5
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.014
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 40.82
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.3387
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.0822
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0249
+      }
+    },
+    "6": {
+      "id": 6,
+      "source": {
+        "type": "Plant",
+        "id": 2,
+        "x": 156.46,
+        "y": 187.48,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 3,
+        "x": 164.04,
+        "y": 187.35,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "zone_id": 0,
+      "demand": {
+        "EngineBlock": 3.0
+      },
+      "safety_stock_empties": {
+        "EngineBlock": 9.0
+      },
+      "safety_stocks_fulls": {
+        "EngineBlock": 4.5
+      },
+      "allowed_empties": [
+        0
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.015
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 40.91
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.3652
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.091
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0275
+      }
+    },
+    "7": {
+      "id": 7,
+      "source": {
+        "type": "Plant",
+        "id": 4,
+        "x": 171.36,
+        "y": 187.4,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 3,
+        "x": 164.04,
+        "y": 187.35,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "zone_id": 0,
+      "demand": {
+        "Dashboard": 9.0
+      },
+      "safety_stock_empties": {
+        "Dashboard": 27.0
+      },
+      "safety_stocks_fulls": {
+        "Dashboard": 13.5
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.015
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 40.88
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.3557
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.0878
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0266
+      }
+    },
+    "8": {
+      "id": 8,
+      "source": {
+        "type": "Plant",
+        "id": 1,
+        "x": 170.12,
+        "y": 190.5,
+        "is_large": true,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 4,
+        "x": 171.36,
+        "y": 187.4,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "zone_id": 0,
+      "demand": {
+        "Dashboard": 24.0
+      },
+      "safety_stock_empties": {
+        "Dashboard": 72.0
+      },
+      "safety_stocks_fulls": {
+        "Dashboard": 36.0
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.007
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 40.4
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.2112
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.0401
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0121
+      }
+    },
+    "9": {
+      "id": 9,
+      "source": {
+        "type": "Plant",
+        "id": 0,
+        "x": 154.92,
+        "y": 191.54,
+        "is_large": true,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 5,
+        "x": 169.5,
+        "y": 185.89,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "zone_id": 0,
+      "demand": {
+        "EngineBlock": 10.0
+      },
+      "safety_stock_empties": {
+        "EngineBlock": 30.0
+      },
+      "safety_stocks_fulls": {
+        "EngineBlock": 15.0
+      },
+      "allowed_empties": [
+        0
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.031
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 41.88
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.6577
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.1877
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0568
+      }
+    },
+    "10": {
+      "id": 10,
+      "source": {
+        "type": "Plant",
+        "id": 2,
+        "x": 156.46,
+        "y": 187.48,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 5,
+        "x": 169.5,
+        "y": 185.89,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "zone_id": 0,
+      "demand": {
+        "EngineBlock": 1.0
+      },
+      "safety_stock_empties": {
+        "EngineBlock": 3.0
+      },
+      "safety_stocks_fulls": {
+        "EngineBlock": 1.5
+      },
+      "allowed_empties": [
+        0
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.026
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 41.58
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.567
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.1577
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0477
+      }
+    },
+    "11": {
+      "id": 11,
+      "source": {
+        "type": "Plant",
+        "id": 8,
+        "x": 234.01,
+        "y": 289.45,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "target": {
+        "type": "Plant",
+        "id": 6,
+        "x": 218.69,
+        "y": 282.23,
+        "is_large": true,
+        "zone_id": 1
+      },
+      "zone_id": 1,
+      "demand": {
+        "SubFrame": 18.0,
+        "Dashboard": 9.0
+      },
+      "safety_stock_empties": {
+        "SubFrame": 54.0,
+        "Dashboard": 27.0
+      },
+      "safety_stocks_fulls": {
+        "SubFrame": 27.0,
+        "Dashboard": 13.5
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.034
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 42.03
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.7049
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.2033
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0615
+      }
+    },
+    "12": {
+      "id": 12,
+      "source": {
+        "type": "Plant",
+        "id": 3,
+        "x": 164.04,
+        "y": 187.35,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 6,
+        "x": 218.69,
+        "y": 282.23,
+        "is_large": true,
+        "zone_id": 1
+      },
+      "zone_id": 1,
+      "demand": {
+        "DoorPanel": 8.0,
+        "Dashboard": 31.0
+      },
+      "safety_stock_empties": {
+        "DoorPanel": 24.0,
+        "Dashboard": 93.0
+      },
+      "safety_stocks_fulls": {
+        "DoorPanel": 12.0,
+        "Dashboard": 46.5
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        0,
+        1
+      ],
+      "lead_time": {
+        "0": 0.219,
+        "1": 0.219
+      },
+      "fixed_economic_cost_per_volume": {
+        "0": 155.47,
+        "1": 53.14
+      },
+      "fixed_co2_cost_per_volume": {
+        "0": 46.9833,
+        "1": 16.0645
+      },
+      "variable_economic_cost_per_volume": {
+        "0": 0.5474,
+        "1": 1.3139
+      },
+      "variable_co2_cost_per_volume": {
+        "0": 0.1653,
+        "1": 0.3974
+      }
+    },
+    "13": {
+      "id": 13,
+      "source": {
+        "type": "Plant",
+        "id": 4,
+        "x": 171.36,
+        "y": 187.4,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 6,
+        "x": 218.69,
+        "y": 282.23,
+        "is_large": true,
+        "zone_id": 1
+      },
+      "zone_id": 1,
+      "demand": {
+        "DoorPanel": 16.0
+      },
+      "safety_stock_empties": {
+        "DoorPanel": 48.0
+      },
+      "safety_stocks_fulls": {
+        "DoorPanel": 24.0
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        0,
+        1
+      ],
+      "lead_time": {
+        "0": 0.212,
+        "1": 0.212
+      },
+      "fixed_economic_cost_per_volume": {
+        "0": 155.3,
+        "1": 52.72
+      },
+      "fixed_co2_cost_per_volume": {
+        "0": 46.9304,
+        "1": 15.9374
+      },
+      "variable_economic_cost_per_volume": {
+        "0": 0.53,
+        "1": 1.2719
+      },
+      "variable_co2_cost_per_volume": {
+        "0": 0.16,
+        "1": 0.3847
+      }
+    },
+    "14": {
+      "id": 14,
+      "source": {
+        "type": "Plant",
+        "id": 8,
+        "x": 234.01,
+        "y": 289.45,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "target": {
+        "type": "Plant",
+        "id": 7,
+        "x": 230.5,
+        "y": 288.12,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "zone_id": 1,
+      "demand": {
+        "WiringHarness": 3.0
+      },
+      "safety_stock_empties": {
+        "WiringHarness": 9.0
+      },
+      "safety_stocks_fulls": {
+        "WiringHarness": 4.5
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.007
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 40.45
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.2261
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.045
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0136
+      }
+    },
+    "15": {
+      "id": 15,
+      "source": {
+        "type": "Plant",
+        "id": 6,
+        "x": 218.69,
+        "y": 282.23,
+        "is_large": true,
+        "zone_id": 1
+      },
+      "target": {
+        "type": "Plant",
+        "id": 7,
+        "x": 230.5,
+        "y": 288.12,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "zone_id": 1,
+      "demand": {
+        "WiringHarness": 28.0
+      },
+      "safety_stock_empties": {
+        "WiringHarness": 84.0
+      },
+      "safety_stocks_fulls": {
+        "WiringHarness": 42.0
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.026
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 41.58
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.5692
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.1584
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0479
+      }
+    },
+    "16": {
+      "id": 16,
+      "source": {
+        "type": "Plant",
+        "id": 7,
+        "x": 230.5,
+        "y": 288.12,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "target": {
+        "type": "Plant",
+        "id": 8,
+        "x": 234.01,
+        "y": 289.45,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "zone_id": 1,
+      "demand": {
+        "DoorPanel": 4.0
+      },
+      "safety_stock_empties": {
+        "DoorPanel": 12.0
+      },
+      "safety_stocks_fulls": {
+        "DoorPanel": 6.0
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.007
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 40.45
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.2261
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.045
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0136
+      }
+    },
+    "17": {
+      "id": 17,
+      "source": {
+        "type": "Plant",
+        "id": 6,
+        "x": 218.69,
+        "y": 282.23,
+        "is_large": true,
+        "zone_id": 1
+      },
+      "target": {
+        "type": "Plant",
+        "id": 8,
+        "x": 234.01,
+        "y": 289.45,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "zone_id": 1,
+      "demand": {
+        "WiringHarness": 15.0
+      },
+      "safety_stock_empties": {
+        "WiringHarness": 45.0
+      },
+      "safety_stocks_fulls": {
+        "WiringHarness": 22.5
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        1
+      ],
+      "lead_time": {
+        "1": 0.034
+      },
+      "fixed_economic_cost_per_volume": {
+        "1": 42.03
+      },
+      "fixed_co2_cost_per_volume": {
+        "1": 12.7049
+      },
+      "variable_economic_cost_per_volume": {
+        "1": 0.2033
+      },
+      "variable_co2_cost_per_volume": {
+        "1": 0.0615
+      }
+    },
+    "18": {
+      "id": 18,
+      "source": {
+        "type": "Plant",
+        "id": 1,
+        "x": 170.12,
+        "y": 190.5,
+        "is_large": true,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 8,
+        "x": 234.01,
+        "y": 289.45,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "zone_id": 1,
+      "demand": {
+        "WiringHarness": 3.0
+      },
+      "safety_stock_empties": {
+        "WiringHarness": 9.0
+      },
+      "safety_stocks_fulls": {
+        "WiringHarness": 4.5
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        0,
+        1
+      ],
+      "lead_time": {
+        "0": 0.236,
+        "1": 0.236
+      },
+      "fixed_economic_cost_per_volume": {
+        "0": 155.89,
+        "1": 54.13
+      },
+      "fixed_co2_cost_per_volume": {
+        "0": 47.1085,
+        "1": 16.3654
+      },
+      "variable_economic_cost_per_volume": {
+        "0": 0.5889,
+        "1": 1.4134
+      },
+      "variable_co2_cost_per_volume": {
+        "0": 0.1778,
+        "1": 0.4275
+      }
+    },
+    "19": {
+      "id": 19,
+      "source": {
+        "type": "Plant",
+        "id": 4,
+        "x": 171.36,
+        "y": 187.4,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 8,
+        "x": 234.01,
+        "y": 289.45,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "zone_id": 1,
+      "demand": {
+        "WiringHarness": 5.0
+      },
+      "safety_stock_empties": {
+        "WiringHarness": 15.0
+      },
+      "safety_stocks_fulls": {
+        "WiringHarness": 7.5
+      },
+      "allowed_empties": [
+        1
+      ],
+      "allowed_modes": [
+        0,
+        1
+      ],
+      "lead_time": {
+        "0": 0.239,
+        "1": 0.239
+      },
+      "fixed_economic_cost_per_volume": {
+        "0": 155.99,
+        "1": 54.37
+      },
+      "fixed_co2_cost_per_volume": {
+        "0": 47.1382,
+        "1": 16.4369
+      },
+      "variable_economic_cost_per_volume": {
+        "0": 0.5988,
+        "1": 1.437
+      },
+      "variable_co2_cost_per_volume": {
+        "0": 0.1808,
+        "1": 0.4347
+      }
+    },
+    "20": {
+      "id": 20,
+      "source": {
+        "type": "Plant",
+        "id": 3,
+        "x": 164.04,
+        "y": 187.35,
+        "is_large": false,
+        "zone_id": 0
+      },
+      "target": {
+        "type": "Plant",
+        "id": 8,
+        "x": 234.01,
+        "y": 289.45,
+        "is_large": false,
+        "zone_id": 1
+      },
+      "zone_id": 1,
+      "demand": {
+        "EngineBlock": 6.0
+      },
+      "safety_stock_empties": {
+        "EngineBlock": 18.0
+      },
+      "safety_stocks_fulls": {
+        "EngineBlock": 9.0
+      },
+      "allowed_empties": [
+        0
+      ],
+      "allowed_modes": [
+        0,
+        1
+      ],
+      "lead_time": {
+        "0": 0.248,
+        "1": 0.248
+      },
+      "fixed_economic_cost_per_volume": {
+        "0": 156.19,
+        "1": 54.85
+      },
+      "fixed_co2_cost_per_volume": {
+        "0": 47.1989,
+        "1": 16.5829
+      },
+      "variable_economic_cost_per_volume": {
+        "0": 0.6189,
+        "1": 1.4852
+      },
+      "variable_co2_cost_per_volume": {
+        "0": 0.1869,
+        "1": 0.4493
+      }
+    }
+  }
+}

@@ -12,6 +12,7 @@ import json
 class Product(BaseModel, frozen=True):
     name: str
     category: str
+    volume: float = 0
 
     def __hash__(self):
         return hash((self.name, self.category))
@@ -23,6 +24,11 @@ class Mode(BaseModel, frozen=True):
     min_vol: float
     min_q: float
     max_q: float
+
+    fixed_environmental_cost: float = 1
+    fixed_economical_cost: float = 1
+    economic_cost_per_km: float = 1
+    environmental_cost_per_km: float = 1
 
     def __hash__(self):
         return hash(self.id)
@@ -56,27 +62,39 @@ class RTI(BaseModel):
     def ser_product_dict(cls, v: dict[Product, float]) -> dict[str, float]:
         return {p.name: val for p, val in v.items()}
 
+    def add_product(
+        self, product: Product, capacity: float, return_inlay_fraction: float
+    ) -> None:
+        self.product_capacity[product] = capacity
+        self.return_inlay_fraction[product] = return_inlay_fraction
+
 
 class Plant(BaseModel):
     id: int
     x: float
     y: float
     is_large: bool
+    zone_id: int = 0
 
 
 class Hub(BaseModel):
     id: int
     x: float
     y: float
-    zone_id: int
-    fixed_cost: float
-    variable_cost: float
+    fixed_economic_cost_per_volume: float = 0
+    fixed_co2_cost_per_volume: float = 0
+    variable_economic_cost_per_volume: float = 0
+    variable_co2_cost_per_volume: float = 0
+    zone_id: int = 0
 
 
 class Zone(BaseModel):
     id: int
     x: float
     y: float
+    importance: float = 0
+    weight_in: float = 0
+    weight_out: float = 0
     plants: list[Plant] = []
     hubs: list[Hub] = []
 
@@ -86,15 +104,29 @@ class Edge(BaseModel):
     source: Plant | Hub
     target: Plant | Hub
     zone_id: int
+
+    # Production Costs
     demand: dict[Product, float] = {}
+    safety_stock_empties: dict[
+        Product, float
+    ] = {}  # Safety Stocks needed for production at source
+    safety_stocks_fulls: dict[
+        Product, float
+    ] = {}  # Safety Stocks of fulls at destination
+
+    # Allowd Modes
     allowed_empties: list[RTI] = []
     allowed_modes: list[Mode] = []
+
+    lead_time: dict[Mode, float] = {}
+
+    # Costs
     fixed_economic_cost_per_volume: dict[Mode, float] = {}
     fixed_co2_cost_per_volume: dict[Mode, float] = {}
     variable_economic_cost_per_volume: dict[Mode, float] = {}
     variable_co2_cost_per_volume: dict[Mode, float] = {}
 
-    @field_serializer("demand")
+    @field_serializer("demand", "safety_stock_empties", "safety_stocks_fulls")
     @classmethod
     def ser_demand(cls, v: dict[Product, float]) -> dict[str, float]:
         return {p.name: val for p, val in v.items()}
@@ -104,6 +136,7 @@ class Edge(BaseModel):
         "fixed_co2_cost_per_volume",
         "variable_economic_cost_per_volume",
         "variable_co2_cost_per_volume",
+        "lead_time",
     )
     @classmethod
     def ser_mode_dict(cls, v: dict[Mode, float]) -> dict[str, float]:
@@ -118,6 +151,11 @@ class Edge(BaseModel):
     @classmethod
     def ser_empties(cls, v: list[RTI]) -> list[int]:
         return [r.id for r in v]
+
+    @field_serializer("allowed_modes")
+    @classmethod
+    def ser_modes(cls, v: list[Mode]) -> list[int]:
+        return [m.id for m in v]
 
 
 # ============================================================
@@ -194,7 +232,15 @@ class Network(BaseModel):
                 target=parse_node(edata["target"]),
                 zone_id=edata["zone_id"],
                 demand=rebuild_product_dict(edata.get("demand", {})),
+                safety_stocks_fulls=rebuild_product_dict(
+                    edata.get("safety_stocks_fulls", {})
+                ),
+                safety_stock_empties=rebuild_product_dict(
+                    edata.get("safety_stock_empties", {})
+                ),
                 allowed_empties=[rtis[eid] for eid in edata.get("allowed_empties", [])],
+                allowed_modes=[modes[mid] for mid in edata.get("allowed_modes", [])],
+                lead_time=rebuild_mode_dict(edata.get("lead_time", {})),
                 fixed_economic_cost_per_volume=rebuild_mode_dict(
                     edata.get("fixed_economic_cost_per_volume", {})
                 ),
@@ -327,3 +373,5 @@ if __name__ == "__main__":
     cost_key = list(loaded.edges[1].fixed_economic_cost_per_volume.keys())[0]
     print(f"\ndemand key type: {type(demand_key).__name__} -> {demand_key}")
     print(f"cost key type:   {type(cost_key).__name__} -> {cost_key}")
+
+    loaded = Network.load_json("./a.json")

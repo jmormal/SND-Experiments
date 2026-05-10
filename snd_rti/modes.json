@@ -1,0 +1,11 @@
+{
+  "id": "FTL",
+  "width": 2.4,
+  "lenght": 13.6,
+  "height": 3,
+  "fixed_environmental_cost": 2,
+  "fixed_economical_cost": 2,
+  "economic_cost_per_km": 2,
+  "environmental_cost_per_km": 2,
+  "volume": 100
+}

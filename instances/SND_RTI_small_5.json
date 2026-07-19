@@ -1,0 +1,3907 @@
+{
+    "nodes": [
+        {
+            "name": "supplier_5",
+            "zone": "Z1",
+            "id": 5,
+            "x": 410.08,
+            "hub": null,
+            "y": 285.31
+        },
+        {
+            "name": "supplier_12",
+            "zone": "Z2",
+            "id": 12,
+            "x": 137.43,
+            "hub": null,
+            "y": 186.5
+        },
+        {
+            "name": "OEM_8",
+            "zone": "Z2",
+            "id": 8,
+            "x": 113.43,
+            "hub": null,
+            "y": 179.62
+        },
+        {
+            "name": "OEM_1",
+            "zone": "Z1",
+            "id": 1,
+            "x": 419.13,
+            "hub": null,
+            "y": 257.68
+        },
+        {
+            "name": "supplier_6",
+            "zone": "Z1",
+            "id": 6,
+            "x": 420.98,
+            "hub": null,
+            "y": 270.8
+        },
+        {
+            "name": "supplier_11",
+            "zone": "Z2",
+            "id": 11,
+            "x": 113.64,
+            "hub": null,
+            "y": 184.29
+        },
+        {
+            "name": "OEM_9",
+            "zone": "Z2",
+            "id": 9,
+            "x": 130.43,
+            "hub": null,
+            "y": 188.42
+        },
+        {
+            "name": "hub_14",
+            "zone": "Z2",
+            "id": 14,
+            "x": 130.11,
+            "hub": {
+                "fixed_hub_emissions": 96.4,
+                "fixed_hub_cost": 63.38,
+                "variable_hub_emissions": 0.2369,
+                "variable_hub_cost": 0.9183
+            },
+            "y": 180.39
+        },
+        {
+            "name": "supplier_3",
+            "zone": "Z1",
+            "id": 3,
+            "x": 397.45,
+            "hub": null,
+            "y": 275.06
+        },
+        {
+            "name": "hub_7",
+            "zone": "Z1",
+            "id": 7,
+            "x": 421.2,
+            "hub": {
+                "fixed_hub_emissions": 68.06,
+                "fixed_hub_cost": 79.43,
+                "variable_hub_emissions": 0.2401,
+                "variable_hub_cost": 1.8409
+            },
+            "y": 283.24
+        },
+        {
+            "name": "supplier_4",
+            "zone": "Z1",
+            "id": 4,
+            "x": 422.43,
+            "hub": null,
+            "y": 260.26
+        },
+        {
+            "name": "supplier_13",
+            "zone": "Z2",
+            "id": 13,
+            "x": 146.87,
+            "hub": null,
+            "y": 179.94
+        },
+        {
+            "name": "OEM_2",
+            "zone": "Z1",
+            "id": 2,
+            "x": 437.59,
+            "hub": null,
+            "y": 250.53
+        },
+        {
+            "name": "supplier_10",
+            "zone": "Z2",
+            "id": 10,
+            "x": 106.5,
+            "hub": null,
+            "y": 163.85
+        }
+    ],
+    "arcs": [
+        {
+            "j": 12,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.8583,
+                    "transit": 1,
+                    "variable_transport_emissions": 5.5126,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 39.69,
+                    "fixed_transport_emissions": 6.1325
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.0626,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 29.73,
+                    "fixed_transport_emissions": 2.453
+                }
+            ],
+            "i": 8
+        },
+        {
+            "j": 10,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.6351,
+                    "transit": 1,
+                    "variable_transport_emissions": 5.9829,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.28,
+                    "fixed_transport_emissions": 7.6762
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.3238,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 26.16,
+                    "fixed_transport_emissions": 3.0705
+                }
+            ],
+            "i": 11
+        },
+        {
+            "j": 12,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 18.4766,
+                    "transit": 1,
+                    "variable_transport_emissions": 65.4866,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 33.92,
+                    "fixed_transport_emissions": 6.2608
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 36.3814,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 295.63,
+                    "fixed_transport_emissions": 2.5043
+                }
+            ],
+            "i": 1
+        },
+        {
+            "j": 2,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 23.3358,
+                    "transit": 1,
+                    "variable_transport_emissions": 57.4699,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 37.64,
+                    "fixed_transport_emissions": 4.828
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 31.9277,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 373.37,
+                    "fixed_transport_emissions": 1.9312
+                }
+            ],
+            "i": 11
+        },
+        {
+            "j": 6,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1,
+                    "p": 1,
+                    "d": 2
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.9848,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.6856,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 49.37,
+                    "fixed_transport_emissions": 4.4005
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 0.9364,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 15.76,
+                    "fixed_transport_emissions": 1.7602
+                }
+            ],
+            "i": 4
+        },
+        {
+            "j": 6,
+            "demand": [
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 23.3748,
+                    "transit": 1,
+                    "variable_transport_emissions": 42.7554,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 43.17,
+                    "fixed_transport_emissions": 4.1126
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 23.753,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 374,
+                    "fixed_transport_emissions": 1.6451
+                }
+            ],
+            "i": 13
+        },
+        {
+            "j": 3,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 24.0163,
+                    "transit": 1,
+                    "variable_transport_emissions": 40.9567,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 45.63,
+                    "fixed_transport_emissions": 4.0527
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 22.7537,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 384.26,
+                    "fixed_transport_emissions": 1.6211
+                }
+            ],
+            "i": 9
+        },
+        {
+            "j": 12,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.5735,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.0706,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 32.09,
+                    "fixed_transport_emissions": 3.1205
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 0.5948,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 9.18,
+                    "fixed_transport_emissions": 1.2482
+                }
+            ],
+            "i": 14
+        },
+        {
+            "j": 13,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.9,
+                    "p": 2,
+                    "d": 20
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.7541,
+                    "transit": 1,
+                    "variable_transport_emissions": 5.1917,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 50.57,
+                    "fixed_transport_emissions": 7.7954
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.8843,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 28.07,
+                    "fixed_transport_emissions": 3.1182
+                }
+            ],
+            "i": 9
+        },
+        {
+            "j": 4,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 20.6462,
+                    "transit": 1,
+                    "variable_transport_emissions": 49.8883,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 36.62,
+                    "fixed_transport_emissions": 4.6084
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 27.7157,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 330.34,
+                    "fixed_transport_emissions": 1.8434
+                }
+            ],
+            "i": 9
+        },
+        {
+            "j": 9,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.6,
+                    "p": 5,
+                    "d": 17
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.7278,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.129,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 48.14,
+                    "fixed_transport_emissions": 4.541
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.7383,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 27.64,
+                    "fixed_transport_emissions": 1.8164
+                }
+            ],
+            "i": 8
+        },
+        {
+            "j": 2,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 2.2358,
+                    "transit": 1,
+                    "variable_transport_emissions": 5.6951,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 32.59,
+                    "fixed_transport_emissions": 4.3235
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.1639,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 35.77,
+                    "fixed_transport_emissions": 1.7294
+                }
+            ],
+            "i": 7
+        },
+        {
+            "j": 14,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.539,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.574,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 35.75,
+                    "fixed_transport_emissions": 5.4381
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 0.8744,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 8.62,
+                    "fixed_transport_emissions": 2.1752
+                }
+            ],
+            "i": 9
+        },
+        {
+            "j": 9,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1,
+                    "p": 4,
+                    "d": 10
+                },
+                {
+                    "ss": 3,
+                    "ser": 1.4,
+                    "p": 1,
+                    "d": 23
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 21.5503,
+                    "transit": 1,
+                    "variable_transport_emissions": 57.8739,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 38.71,
+                    "fixed_transport_emissions": 5.4148
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 32.1522,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 344.8,
+                    "fixed_transport_emissions": 2.1659
+                }
+            ],
+            "i": 1
+        },
+        {
+            "j": 1,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.1,
+                    "p": 2,
+                    "d": 11
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.4247,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.5272,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 38.38,
+                    "fixed_transport_emissions": 3.5454
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.404,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 22.8,
+                    "fixed_transport_emissions": 1.4182
+                }
+            ],
+            "i": 2
+        },
+        {
+            "j": 5,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.8,
+                    "p": 2,
+                    "d": 3
+                }
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.3152,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.3955,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 38.65,
+                    "fixed_transport_emissions": 3.6662
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.3308,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 21.04,
+                    "fixed_transport_emissions": 1.4665
+                }
+            ],
+            "i": 6
+        },
+        {
+            "j": 6,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.8,
+                    "p": 1,
+                    "d": 18
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 22.4795,
+                    "transit": 1,
+                    "variable_transport_emissions": 75.6536,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.53,
+                    "fixed_transport_emissions": 7.1039
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 42.0298,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 359.67,
+                    "fixed_transport_emissions": 2.8416
+                }
+            ],
+            "i": 12
+        },
+        {
+            "j": 8,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.5,
+                    "p": 1,
+                    "d": 5
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 23.5427,
+                    "transit": 1,
+                    "variable_transport_emissions": 75.4951,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 37.84,
+                    "fixed_transport_emissions": 6.3198
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 41.9417,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 376.68,
+                    "fixed_transport_emissions": 2.5279
+                }
+            ],
+            "i": 2
+        },
+        {
+            "j": 2,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.8,
+                    "p": 2,
+                    "d": 12
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 32.7709,
+                    "transit": 1,
+                    "variable_transport_emissions": 47.5365,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 51.07,
+                    "fixed_transport_emissions": 3.8582
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 26.4091,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 524.33,
+                    "fixed_transport_emissions": 1.5433
+                }
+            ],
+            "i": 10
+        },
+        {
+            "j": 1,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.8,
+                    "p": 2,
+                    "d": 10
+                },
+                {
+                    "ss": 3,
+                    "ser": 0.9,
+                    "p": 3,
+                    "d": 13
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 22.4584,
+                    "transit": 1,
+                    "variable_transport_emissions": 51.2543,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.34,
+                    "fixed_transport_emissions": 4.7955
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 28.4746,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 359.33,
+                    "fixed_transport_emissions": 1.9182
+                }
+            ],
+            "i": 9
+        },
+        {
+            "j": 5,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 23.0345,
+                    "transit": 1,
+                    "variable_transport_emissions": 66.4117,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 43.33,
+                    "fixed_transport_emissions": 6.5067
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 36.8954,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 368.55,
+                    "fixed_transport_emissions": 2.6027
+                }
+            ],
+            "i": 13
+        },
+        {
+            "j": 3,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 20.2494,
+                    "transit": 1,
+                    "variable_transport_emissions": 68.1271,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 36.04,
+                    "fixed_transport_emissions": 6.3159
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 37.8484,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 323.99,
+                    "fixed_transport_emissions": 2.5263
+                }
+            ],
+            "i": 8
+        },
+        {
+            "j": 11,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.6,
+                    "p": 1,
+                    "d": 2
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 2.2967,
+                    "transit": 1,
+                    "variable_transport_emissions": 9.3528,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 36.55,
+                    "fixed_transport_emissions": 7.7529
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 5.196,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 36.75,
+                    "fixed_transport_emissions": 3.1012
+                }
+            ],
+            "i": 13
+        },
+        {
+            "j": 8,
+            "demand": [
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.8185,
+                    "transit": 1,
+                    "variable_transport_emissions": 4.3098,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 50.67,
+                    "fixed_transport_emissions": 6.2548
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.3943,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 29.1,
+                    "fixed_transport_emissions": 2.5019
+                }
+            ],
+            "i": 9
+        },
+        {
+            "j": 3,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.7231,
+                    "transit": 1,
+                    "variable_transport_emissions": 5.7502,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 33.07,
+                    "fixed_transport_emissions": 5.7477
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.1946,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 27.57,
+                    "fixed_transport_emissions": 2.2991
+                }
+            ],
+            "i": 1
+        },
+        {
+            "j": 4,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 30.954,
+                    "transit": 1,
+                    "variable_transport_emissions": 91.2796,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 51.7,
+                    "fixed_transport_emissions": 7.9397
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 50.7109,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 495.26,
+                    "fixed_transport_emissions": 3.1759
+                }
+            ],
+            "i": 8
+        },
+        {
+            "j": 10,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 2.5174,
+                    "transit": 1,
+                    "variable_transport_emissions": 4.3301,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 39.14,
+                    "fixed_transport_emissions": 3.5067
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.4056,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.28,
+                    "fixed_transport_emissions": 1.4027
+                }
+            ],
+            "i": 9
+        },
+        {
+            "j": 14,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.1088,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.8215,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 35.41,
+                    "fixed_transport_emissions": 4.6931
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.5675,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 17.74,
+                    "fixed_transport_emissions": 1.8772
+                }
+            ],
+            "i": 8
+        },
+        {
+            "j": 4,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.5,
+                    "p": 4,
+                    "d": 7
+                }
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.2869,
+                    "transit": 1,
+                    "variable_transport_emissions": 0.6536,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 36.52,
+                    "fixed_transport_emissions": 4.3331
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 0.3631,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 4.59,
+                    "fixed_transport_emissions": 1.7333
+                }
+            ],
+            "i": 1
+        },
+        {
+            "j": 12,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 27.0544,
+                    "transit": 1,
+                    "variable_transport_emissions": 77.9958,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 48.78,
+                    "fixed_transport_emissions": 7.3239
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 43.331,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 432.87,
+                    "fixed_transport_emissions": 2.9296
+                }
+            ],
+            "i": 6
+        },
+        {
+            "j": 2,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 29.1776,
+                    "transit": 1,
+                    "variable_transport_emissions": 47.6252,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 49.66,
+                    "fixed_transport_emissions": 4.2215
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 26.4584,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 466.84,
+                    "fixed_transport_emissions": 1.6886
+                }
+            ],
+            "i": 9
+        },
+        {
+            "j": 11,
+            "demand": [
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 23.876,
+                    "transit": 1,
+                    "variable_transport_emissions": 66.0121,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.04,
+                    "fixed_transport_emissions": 5.7663
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 36.6734,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 382.02,
+                    "fixed_transport_emissions": 2.3065
+                }
+            ],
+            "i": 4
+        },
+        {
+            "j": 6,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.5,
+                    "p": 4,
+                    "d": 4
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 21.4611,
+                    "transit": 1,
+                    "variable_transport_emissions": 52.4223,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 34.46,
+                    "fixed_transport_emissions": 4.3838
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 29.1235,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 343.38,
+                    "fixed_transport_emissions": 1.7535
+                }
+            ],
+            "i": 10
+        },
+        {
+            "j": 4,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.8,
+                    "p": 3,
+                    "d": 5
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 2.6627,
+                    "transit": 1,
+                    "variable_transport_emissions": 7.159,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 48.9,
+                    "fixed_transport_emissions": 6.8478
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.9772,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 42.6,
+                    "fixed_transport_emissions": 2.7391
+                }
+            ],
+            "i": 3
+        },
+        {
+            "j": 13,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.3,
+                    "p": 2,
+                    "d": 3
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 22.2003,
+                    "transit": 1,
+                    "variable_transport_emissions": 43.933,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 44.17,
+                    "fixed_transport_emissions": 4.5531
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 24.4072,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 355.2,
+                    "fixed_transport_emissions": 1.8212
+                }
+            ],
+            "i": 3
+        },
+        {
+            "j": 11,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.7,
+                    "p": 5,
+                    "d": 6
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.4561,
+                    "transit": 1,
+                    "variable_transport_emissions": 4.9287,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 32.51,
+                    "fixed_transport_emissions": 5.7308
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.7382,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 23.3,
+                    "fixed_transport_emissions": 2.2923
+                }
+            ],
+            "i": 12
+        },
+        {
+            "j": 5,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 21.9514,
+                    "transit": 1,
+                    "variable_transport_emissions": 76.1748,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 37.38,
+                    "fixed_transport_emissions": 6.7564
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 42.3193,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 351.22,
+                    "fixed_transport_emissions": 2.7026
+                }
+            ],
+            "i": 11
+        },
+        {
+            "j": 12,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.2,
+                    "p": 1,
+                    "d": 25
+                }
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.0075,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.0324,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 46.73,
+                    "fixed_transport_emissions": 7.3247
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.6847,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 16.12,
+                    "fixed_transport_emissions": 2.9299
+                }
+            ],
+            "i": 13
+        },
+        {
+            "j": 1,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.8,
+                    "p": 2,
+                    "d": 14
+                },
+                {
+                    "ss": 3,
+                    "ser": 1.1,
+                    "p": 1,
+                    "d": 22
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 20.3089,
+                    "transit": 1,
+                    "variable_transport_emissions": 68.1792,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 34.33,
+                    "fixed_transport_emissions": 6.0026
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 37.8773,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 324.94,
+                    "fixed_transport_emissions": 2.401
+                }
+            ],
+            "i": 8
+        },
+        {
+            "j": 5,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.9638,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.1872,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 45.45,
+                    "fixed_transport_emissions": 7.8278
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.7707,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 15.42,
+                    "fixed_transport_emissions": 3.1311
+                }
+            ],
+            "i": 7
+        },
+        {
+            "j": 10,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.3,
+                    "p": 2,
+                    "d": 8
+                }
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.6156,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.3583,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 50.01,
+                    "fixed_transport_emissions": 3.802
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.3102,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 25.85,
+                    "fixed_transport_emissions": 1.5208
+                }
+            ],
+            "i": 8
+        },
+        {
+            "j": 9,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.9,
+                    "p": 5,
+                    "d": 6
+                },
+                {
+                    "ss": 3,
+                    "ser": 0.7,
+                    "p": 3,
+                    "d": 8
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.7253,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.8491,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 49.74,
+                    "fixed_transport_emissions": 4.2779
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.5828,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 27.6,
+                    "fixed_transport_emissions": 1.7112
+                }
+            ],
+            "i": 13
+        },
+        {
+            "j": 10,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 22.5246,
+                    "transit": 1,
+                    "variable_transport_emissions": 91.6952,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 36.8,
+                    "fixed_transport_emissions": 7.8033
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 50.9418,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 360.39,
+                    "fixed_transport_emissions": 3.1213
+                }
+            ],
+            "i": 1
+        },
+        {
+            "j": 2,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 22.3406,
+                    "transit": 1,
+                    "variable_transport_emissions": 68.706,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 35.91,
+                    "fixed_transport_emissions": 5.7514
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 38.17,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 357.45,
+                    "fixed_transport_emissions": 2.3006
+                }
+            ],
+            "i": 8
+        },
+        {
+            "j": 2,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.511,
+                    "transit": 1,
+                    "variable_transport_emissions": 4.0166,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.7,
+                    "fixed_transport_emissions": 5.6349
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.2314,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 24.18,
+                    "fixed_transport_emissions": 2.254
+                }
+            ],
+            "i": 1
+        },
+        {
+            "j": 11,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.1,
+                    "p": 1,
+                    "d": 12
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.6534,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.446,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.73,
+                    "fixed_transport_emissions": 4.4213
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.9144,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 26.45,
+                    "fixed_transport_emissions": 1.7685
+                }
+            ],
+            "i": 10
+        },
+        {
+            "j": 3,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 2.1883,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.7342,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 48.81,
+                    "fixed_transport_emissions": 4.3382
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.0745,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 35.01,
+                    "fixed_transport_emissions": 1.7353
+                }
+            ],
+            "i": 6
+        },
+        {
+            "j": 8,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.7,
+                    "p": 1,
+                    "d": 45
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 23.184,
+                    "transit": 1,
+                    "variable_transport_emissions": 56.7912,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 41.27,
+                    "fixed_transport_emissions": 5.2649
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 31.5507,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 370.94,
+                    "fixed_transport_emissions": 2.106
+                }
+            ],
+            "i": 3
+        },
+        {
+            "j": 12,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.9,
+                    "p": 4,
+                    "d": 5
+                }
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.9453,
+                    "transit": 1,
+                    "variable_transport_emissions": 6.5681,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 43.43,
+                    "fixed_transport_emissions": 7.637
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.6489,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 31.13,
+                    "fixed_transport_emissions": 3.0548
+                }
+            ],
+            "i": 11
+        },
+        {
+            "j": 10,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 2.2682,
+                    "transit": 1,
+                    "variable_transport_emissions": 5.188,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 41.96,
+                    "fixed_transport_emissions": 4.9986
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.8822,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 36.29,
+                    "fixed_transport_emissions": 1.9994
+                }
+            ],
+            "i": 14
+        },
+        {
+            "j": 4,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.5,
+                    "p": 4,
+                    "d": 23
+                }
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.7617,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.2735,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 38.18,
+                    "fixed_transport_emissions": 5.9353
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.263,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 12.19,
+                    "fixed_transport_emissions": 2.3741
+                }
+            ],
+            "i": 6
+        },
+        {
+            "j": 13,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.4,
+                    "p": 5,
+                    "d": 6
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 22.1035,
+                    "transit": 1,
+                    "variable_transport_emissions": 39.0575,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.82,
+                    "fixed_transport_emissions": 3.7569
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 21.6986,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 353.66,
+                    "fixed_transport_emissions": 1.5028
+                }
+            ],
+            "i": 6
+        },
+        {
+            "j": 9,
+            "demand": [
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.471,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.92,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 34.6,
+                    "fixed_transport_emissions": 7.3461
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.0666,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 7.54,
+                    "fixed_transport_emissions": 2.9384
+                }
+            ],
+            "i": 12
+        },
+        {
+            "j": 9,
+            "demand": [
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.5711,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.9446,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 48.46,
+                    "fixed_transport_emissions": 4.7308
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.6359,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 25.14,
+                    "fixed_transport_emissions": 1.8923
+                }
+            ],
+            "i": 11
+        },
+        {
+            "j": 6,
+            "demand": [
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 29.0718,
+                    "transit": 1,
+                    "variable_transport_emissions": 36.0253,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 48.34,
+                    "fixed_transport_emissions": 3.1196
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 20.014,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 465.15,
+                    "fixed_transport_emissions": 1.2478
+                }
+            ],
+            "i": 8
+        },
+        {
+            "j": 1,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.5,
+                    "p": 3,
+                    "d": 6
+                },
+                {
+                    "ss": 3,
+                    "ser": 0.6,
+                    "p": 1,
+                    "d": 7
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.7751,
+                    "transit": 1,
+                    "variable_transport_emissions": 8.1468,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 32.57,
+                    "fixed_transport_emissions": 7.7847
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 4.526,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 28.4,
+                    "fixed_transport_emissions": 3.1139
+                }
+            ],
+            "i": 5
+        },
+        {
+            "j": 5,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 24.895,
+                    "transit": 1,
+                    "variable_transport_emissions": 33.4805,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 44.86,
+                    "fixed_transport_emissions": 3.1424
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 18.6003,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 398.32,
+                    "fixed_transport_emissions": 1.2569
+                }
+            ],
+            "i": 9
+        },
+        {
+            "j": 6,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.4,
+                    "p": 2,
+                    "d": 15
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.8399,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.5562,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 33.81,
+                    "fixed_transport_emissions": 5.359
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.4201,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 13.44,
+                    "fixed_transport_emissions": 2.1436
+                }
+            ],
+            "i": 1
+        },
+        {
+            "j": 3,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.8,
+                    "p": 2,
+                    "d": 12
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 2.4,
+                    "transit": 1,
+                    "variable_transport_emissions": 7.7402,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 44.08,
+                    "fixed_transport_emissions": 7.4037
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 4.3001,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 38.4,
+                    "fixed_transport_emissions": 2.9615
+                }
+            ],
+            "i": 4
+        },
+        {
+            "j": 11,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.6,
+                    "p": 5,
+                    "d": 9
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.3535,
+                    "transit": 1,
+                    "variable_transport_emissions": 4.7935,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 41.75,
+                    "fixed_transport_emissions": 7.7011
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.663,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 21.66,
+                    "fixed_transport_emissions": 3.0804
+                }
+            ],
+            "i": 9
+        },
+        {
+            "j": 3,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 25.8193,
+                    "transit": 1,
+                    "variable_transport_emissions": 34.6786,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 51.38,
+                    "fixed_transport_emissions": 3.594
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 19.2659,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 413.11,
+                    "fixed_transport_emissions": 1.4376
+                }
+            ],
+            "i": 13
+        },
+        {
+            "j": 13,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.8,
+                    "p": 2,
+                    "d": 14
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 21.9473,
+                    "transit": 1,
+                    "variable_transport_emissions": 58.4994,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.78,
+                    "fixed_transport_emissions": 5.6614
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 32.4997,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 351.16,
+                    "fixed_transport_emissions": 2.2645
+                }
+            ],
+            "i": 4
+        },
+        {
+            "j": 8,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.7,
+                    "p": 2,
+                    "d": 20
+                },
+                {
+                    "ss": 3,
+                    "ser": 1.2,
+                    "p": 1,
+                    "d": 11
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 24.2104,
+                    "transit": 1,
+                    "variable_transport_emissions": 66.9739,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 41,
+                    "fixed_transport_emissions": 5.9075
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 37.2077,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 387.37,
+                    "fixed_transport_emissions": 2.363
+                }
+            ],
+            "i": 5
+        },
+        {
+            "j": 14,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.137,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.1713,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 36.16,
+                    "fixed_transport_emissions": 3.5966
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.2063,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 18.19,
+                    "fixed_transport_emissions": 1.4386
+                }
+            ],
+            "i": 13
+        },
+        {
+            "j": 10,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.6,
+                    "p": 3,
+                    "d": 15
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 31.0175,
+                    "transit": 1,
+                    "variable_transport_emissions": 39.0525,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 50.59,
+                    "fixed_transport_emissions": 3.3176
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 21.6958,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 496.28,
+                    "fixed_transport_emissions": 1.327
+                }
+            ],
+            "i": 5
+        },
+        {
+            "j": 4,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 24.4355,
+                    "transit": 1,
+                    "variable_transport_emissions": 34.099,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 45.4,
+                    "fixed_transport_emissions": 3.3
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 18.9439,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 390.97,
+                    "fixed_transport_emissions": 1.32
+                }
+            ],
+            "i": 13
+        },
+        {
+            "j": 7,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.6628,
+                    "transit": 1,
+                    "variable_transport_emissions": 6.7544,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 34.59,
+                    "fixed_transport_emissions": 7.3176
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.7525,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 26.6,
+                    "fixed_transport_emissions": 2.927
+                }
+            ],
+            "i": 1
+        },
+        {
+            "j": 6,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.4,
+                    "p": 4,
+                    "d": 7
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.5427,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.4373,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 34.41,
+                    "fixed_transport_emissions": 3.9934
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.9096,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 24.68,
+                    "fixed_transport_emissions": 1.5974
+                }
+            ],
+            "i": 3
+        },
+        {
+            "j": 9,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.9,
+                    "p": 4,
+                    "d": 12
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 23.6188,
+                    "transit": 1,
+                    "variable_transport_emissions": 58.0492,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.2,
+                    "fixed_transport_emissions": 5.1454
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 32.2495,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 377.9,
+                    "fixed_transport_emissions": 2.0582
+                }
+            ],
+            "i": 2
+        },
+        {
+            "j": 8,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.6,
+                    "p": 5,
+                    "d": 12
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 25.9551,
+                    "transit": 1,
+                    "variable_transport_emissions": 35.0149,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 43.15,
+                    "fixed_transport_emissions": 3.0321
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 19.4527,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 415.28,
+                    "fixed_transport_emissions": 1.2128
+                }
+            ],
+            "i": 6
+        },
+        {
+            "j": 7,
+            "demand": [
+            ],
+            "empties_ok": [
+                1,
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 18.7164,
+                    "transit": 1,
+                    "variable_transport_emissions": 36.628,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 32.33,
+                    "fixed_transport_emissions": 3.2956
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 20.3489,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 299.46,
+                    "fixed_transport_emissions": 1.3182
+                }
+            ],
+            "i": 14
+        },
+        {
+            "j": 10,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 22.2098,
+                    "transit": 1,
+                    "variable_transport_emissions": 42.1342,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 35.66,
+                    "fixed_transport_emissions": 3.5235
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 23.4079,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 355.36,
+                    "fixed_transport_emissions": 1.4094
+                }
+            ],
+            "i": 6
+        },
+        {
+            "j": 13,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.9,
+                    "p": 1,
+                    "d": 14
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.9937,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.6042,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 46.09,
+                    "fixed_transport_emissions": 6.2903
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.4468,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 15.9,
+                    "fixed_transport_emissions": 2.5161
+                }
+            ],
+            "i": 12
+        },
+        {
+            "j": 2,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.7924,
+                    "transit": 1,
+                    "variable_transport_emissions": 5.6955,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 36.47,
+                    "fixed_transport_emissions": 6.0361
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.1641,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 28.68,
+                    "fixed_transport_emissions": 2.4145
+                }
+            ],
+            "i": 6
+        },
+        {
+            "j": 3,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.9,
+                    "p": 2,
+                    "d": 4
+                }
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 24.8209,
+                    "transit": 1,
+                    "variable_transport_emissions": 38.6863,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 44.43,
+                    "fixed_transport_emissions": 3.6065
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 21.4924,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 397.13,
+                    "fixed_transport_emissions": 1.4426
+                }
+            ],
+            "i": 11
+        },
+        {
+            "j": 12,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.1,
+                    "p": 5,
+                    "d": 6
+                }
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.5287,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.3176,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 38.84,
+                    "fixed_transport_emissions": 5.0412
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 0.732,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 8.46,
+                    "fixed_transport_emissions": 2.0165
+                }
+            ],
+            "i": 9
+        },
+        {
+            "j": 4,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.7,
+                    "p": 5,
+                    "d": 6
+                }
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 30.0688,
+                    "transit": 1,
+                    "variable_transport_emissions": 36.9917,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 50.43,
+                    "fixed_transport_emissions": 3.2313
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 20.551,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 481.1,
+                    "fixed_transport_emissions": 1.2925
+                }
+            ],
+            "i": 11
+        },
+        {
+            "j": 14,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.1191,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.9814,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 35.26,
+                    "fixed_transport_emissions": 3.2509
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.1008,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 17.91,
+                    "fixed_transport_emissions": 1.3004
+                }
+            ],
+            "i": 11
+        },
+        {
+            "j": 6,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.8,
+                    "p": 5,
+                    "d": 7
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.2382,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.1772,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 36.38,
+                    "fixed_transport_emissions": 4.8626
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.7651,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 19.81,
+                    "fixed_transport_emissions": 1.945
+                }
+            ],
+            "i": 5
+        },
+        {
+            "j": 5,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 28.1703,
+                    "transit": 1,
+                    "variable_transport_emissions": 90.2491,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 47.71,
+                    "fixed_transport_emissions": 7.9605
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 50.1384,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 450.73,
+                    "fixed_transport_emissions": 3.1842
+                }
+            ],
+            "i": 8
+        },
+        {
+            "j": 3,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 2.4422,
+                    "transit": 1,
+                    "variable_transport_emissions": 5.5576,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 51.85,
+                    "fixed_transport_emissions": 6.1456
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.0876,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 39.07,
+                    "fixed_transport_emissions": 2.4582
+                }
+            ],
+            "i": 7
+        },
+        {
+            "j": 5,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 2.1733,
+                    "transit": 1,
+                    "variable_transport_emissions": 6.8184,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 39.87,
+                    "fixed_transport_emissions": 6.5153
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.788,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 34.77,
+                    "fixed_transport_emissions": 2.6061
+                }
+            ],
+            "i": 1
+        },
+        {
+            "j": 11,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.1,
+                    "p": 1,
+                    "d": 2
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.4326,
+                    "transit": 1,
+                    "variable_transport_emissions": 0.727,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 49.4,
+                    "fixed_transport_emissions": 4.3244
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 0.4039,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 6.92,
+                    "fixed_transport_emissions": 1.7298
+                }
+            ],
+            "i": 8
+        },
+        {
+            "j": 8,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.2,
+                    "p": 5,
+                    "d": 7
+                },
+                {
+                    "ss": 3,
+                    "ser": 2,
+                    "p": 2,
+                    "d": 8
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 24.4648,
+                    "transit": 1,
+                    "variable_transport_emissions": 78.5609,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.86,
+                    "fixed_transport_emissions": 6.8334
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 43.645,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 391.44,
+                    "fixed_transport_emissions": 2.7334
+                }
+            ],
+            "i": 4
+        },
+        {
+            "j": 4,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.6136,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.9381,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 37.4,
+                    "fixed_transport_emissions": 3.5468
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.6323,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 25.82,
+                    "fixed_transport_emissions": 1.4187
+                }
+            ],
+            "i": 7
+        },
+        {
+            "j": 10,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.3,
+                    "p": 3,
+                    "d": 7
+                }
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 3.067,
+                    "transit": 1,
+                    "variable_transport_emissions": 8.557,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 37.64,
+                    "fixed_transport_emissions": 5.4693
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 4.7539,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 49.07,
+                    "fixed_transport_emissions": 2.1877
+                }
+            ],
+            "i": 13
+        },
+        {
+            "j": 14,
+            "demand": [
+            ],
+            "empties_ok": [
+                1,
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 29.2469,
+                    "transit": 1,
+                    "variable_transport_emissions": 59.5302,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 50.52,
+                    "fixed_transport_emissions": 5.3562
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 33.0723,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 467.95,
+                    "fixed_transport_emissions": 2.1425
+                }
+            ],
+            "i": 7
+        },
+        {
+            "j": 2,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 25.017,
+                    "transit": 1,
+                    "variable_transport_emissions": 64.6155,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 44.6,
+                    "fixed_transport_emissions": 5.9995
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 35.8975,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 400.27,
+                    "fixed_transport_emissions": 2.3998
+                }
+            ],
+            "i": 13
+        },
+        {
+            "j": 2,
+            "demand": [
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.4796,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.8694,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 43.81,
+                    "fixed_transport_emissions": 5.968
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.1497,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 23.67,
+                    "fixed_transport_emissions": 2.3872
+                }
+            ],
+            "i": 4
+        },
+        {
+            "j": 3,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.1,
+                    "p": 4,
+                    "d": 10
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 4.1506,
+                    "transit": 1,
+                    "variable_transport_emissions": 6.6521,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 47.06,
+                    "fixed_transport_emissions": 3.9282
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 3.6956,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 66.41,
+                    "fixed_transport_emissions": 1.5713
+                }
+            ],
+            "i": 2
+        },
+        {
+            "j": 1,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 0.7,
+                    "p": 5,
+                    "d": 19
+                },
+                {
+                    "ss": 3,
+                    "ser": 0.9,
+                    "p": 3,
+                    "d": 12
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 24.6236,
+                    "transit": 1,
+                    "variable_transport_emissions": 81.9817,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 45.2,
+                    "fixed_transport_emissions": 7.8378
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 45.5454,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 393.98,
+                    "fixed_transport_emissions": 3.1351
+                }
+            ],
+            "i": 12
+        },
+        {
+            "j": 4,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.9,
+                    "p": 5,
+                    "d": 6
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 1.6537,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.8052,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 48.97,
+                    "fixed_transport_emissions": 4.3266
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.5584,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 26.46,
+                    "fixed_transport_emissions": 1.7306
+                }
+            ],
+            "i": 2
+        },
+        {
+            "j": 13,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.1,
+                    "p": 2,
+                    "d": 12
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 3.1749,
+                    "transit": 1,
+                    "variable_transport_emissions": 5.1209,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 38.96,
+                    "fixed_transport_emissions": 3.2731
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.845,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 50.8,
+                    "fixed_transport_emissions": 1.3092
+                }
+            ],
+            "i": 10
+        },
+        {
+            "j": 7,
+            "demand": [
+            ],
+            "empties_ok": [
+                2
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 0.8834,
+                    "transit": 1,
+                    "variable_transport_emissions": 2.8752,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 37.87,
+                    "fixed_transport_emissions": 6.4202
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 1.5973,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 14.13,
+                    "fixed_transport_emissions": 2.5681
+                }
+            ],
+            "i": 6
+        },
+        {
+            "j": 1,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.6,
+                    "p": 3,
+                    "d": 5
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 23.5903,
+                    "transit": 1,
+                    "variable_transport_emissions": 64.0995,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 40.05,
+                    "fixed_transport_emissions": 5.6673
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 35.6109,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 377.45,
+                    "fixed_transport_emissions": 2.2669
+                }
+            ],
+            "i": 11
+        },
+        {
+            "j": 2,
+            "demand": [
+                {
+                    "ss": 3,
+                    "ser": 1.4,
+                    "p": 2,
+                    "d": 15
+                },
+                {
+                    "ss": 3,
+                    "ser": 1,
+                    "p": 3,
+                    "d": 7
+                }
+            ],
+            "empties_ok": [
+            ],
+            "modes": [
+                {
+                    "m": 2,
+                    "variable_transport_cost": 26.8587,
+                    "transit": 1,
+                    "variable_transport_emissions": 75.9233,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 46.67,
+                    "fixed_transport_emissions": 6.8717
+                },
+                {
+                    "m": 1,
+                    "variable_transport_cost": 0,
+                    "transit": 1,
+                    "variable_transport_emissions": 42.1796,
+                    "min_weight": 0,
+                    "min_volume": 0,
+                    "max_weight": 24,
+                    "max_volume": 97.92,
+                    "fixed_transport_cost": 429.74,
+                    "fixed_transport_emissions": 2.7487
+                }
+            ],
+            "i": 12
+        }
+    ],
+    "alpha": 0.0421,
+    "compat": [
+        {
+            "kappa": 11,
+            "r": 2,
+            "ric": 0,
+            "g_inlay": 0,
+            "p": 3
+        },
+        {
+            "kappa": 11,
+            "r": 2,
+            "ric": 0,
+            "g_inlay": 0,
+            "p": 1
+        },
+        {
+            "kappa": 30,
+            "r": 2,
+            "ric": 0.102,
+            "g_inlay": 0.003,
+            "p": 5
+        },
+        {
+            "kappa": 8,
+            "r": 2,
+            "ric": 0,
+            "g_inlay": 0,
+            "p": 4
+        },
+        {
+            "kappa": 7,
+            "r": 2,
+            "ric": 0,
+            "g_inlay": 0,
+            "p": 2
+        }
+    ],
+    "products": [
+        {
+            "name": "WiringHarness",
+            "weight": 0.012081,
+            "id": 5
+        },
+        {
+            "name": "Dashboard",
+            "weight": 0.022453,
+            "id": 4
+        },
+        {
+            "name": "DoorPanel",
+            "weight": 0.02419,
+            "id": 2
+        },
+        {
+            "name": "SubFrame",
+            "weight": 0.056881,
+            "id": 3
+        },
+        {
+            "name": "EngineBlock",
+            "weight": 0.10051099999999999,
+            "id": 1
+        }
+    ],
+    "tau": [
+        0.5,
+        1.0,
+        2.0,
+        3.0,
+        5.0,
+        7.0,
+        10.0,
+        14.0
+    ],
+    "rtis": [
+        {
+            "name": "MagnumOpt-1210",
+            "v_empty": 0.2366,
+            "weight": 0.02714,
+            "purchase_emissions": 0.06,
+            "id": 2,
+            "purchase_cost": 262.01,
+            "v_full": 0.7659,
+            "life": 3410.9,
+            "pool": 0
+        },
+        {
+            "name": "C-KLT-6428",
+            "v_empty": 0.0116,
+            "weight": 0.001,
+            "purchase_emissions": 0,
+            "id": 1,
+            "purchase_cost": 11.74,
+            "v_full": 0.0328,
+            "life": 2605.9,
+            "pool": 0
+        }
+    ],
+    "modes": [
+        {
+            "name": "LTL",
+            "qmax": 14,
+            "qmin": 0,
+            "id": 2,
+            "rho": 0.24509803921568626
+        },
+        {
+            "name": "FTL",
+            "qmax": 14,
+            "qmin": 0,
+            "id": 1,
+            "rho": 0.24509803921568626
+        }
+    ]
+}

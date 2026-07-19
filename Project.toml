@@ -1,0 +1,11 @@
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
+Gurobi = "2e9cd046-0924-5485-92f1-d5272153d98b"
+JSON3 = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
+JuMP = "4076af6c-e467-56ae-b986-b466b2749572"
+LanguageServer = "2b0e0bc5-e4fd-59b4-8912-456d1b03d8d7"
+MLFlowClient = "64a0f543-368b-4a9a-827a-e71edb2a0b83"
+MultiObjectiveAlgorithms = "0327d340-17cd-11ea-3e99-2fd5d98cecda"
+Plotly = "58dd65bb-95f3-509e-9936-c39a10fdeae7"
+PlotlyJS = "f0f68f2c-4968-5e81-91da-67840de0976a"
+StructTypes = "856f2bd8-1eba-4b0a-8007-ebc267875bd4"

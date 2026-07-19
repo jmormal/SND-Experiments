@@ -1,13 +1,6 @@
 from __future__ import annotations
 from numpy import full
-from pydantic import (
-    BaseModel,
-    field_serializer,
-    field_validator,
-    computed_field,
-    ConfigDict,
-)
-
+from pydantic import BaseModel, field_serializer, field_validator, computed_field
 import json
 
 
@@ -39,9 +32,6 @@ class Mode(BaseModel, frozen=True):
 
     def __hash__(self):
         return hash(self.id)
-
-    def __str__(self) -> str:
-        return f"Mode {self.id}"
 
 
 class RTI(BaseModel):
@@ -81,9 +71,6 @@ class RTI(BaseModel):
     ) -> None:
         self.product_capacity[product] = capacity
         self.return_inlay_fraction[product] = return_inlay_fraction
-
-    def __str__(self) -> str:
-        return f"RTI {self.id} "
 
 
 class Plant(BaseModel):
@@ -146,9 +133,6 @@ class Plant(BaseModel):
             if incoming_products & set(rti.product_capacity.keys())
         ]
 
-    def __repr__(self) -> str:
-        return f"Plant {self.id}"
-
 
 class Hub(BaseModel):
     id: int
@@ -160,9 +144,6 @@ class Hub(BaseModel):
     variable_co2_cost_per_volume: float = 0
     zone_id: int = 0
 
-    def __repr__(self) -> str:
-        return f"Hub {self.id}"
-
 
 class Zone(BaseModel):
     id: int
@@ -173,9 +154,6 @@ class Zone(BaseModel):
     weight_out: float = 0
     plants: list[Plant] = []
     hubs: list[Hub] = []
-
-    def __repr__(self) -> str:
-        return f"Zone {self.id}"
 
 
 class Edge(BaseModel):
@@ -247,9 +225,6 @@ class Edge(BaseModel):
                 self.target.incoming_demand[product] = (
                     self.target.incoming_demand.get(product, 0.0) + qty
                 )
-
-    def __repr__(self) -> str:
-        return f"Edge {self.id}"
 
 
 # ============================================================
@@ -403,8 +378,8 @@ class Network(BaseModel):
                 if plant.possible_outgoing_empties:
                     self.edges[num_edges] = Edge(
                         id=num_edges,
-                        source=plant,
-                        target=hub,
+                        source=hub,
+                        target=plant,
                         zone_id=2,
                         allowed_empties=plant.possible_outgoing_empties,
                     )

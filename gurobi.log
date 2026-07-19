@@ -1,0 +1,8 @@
+
+Gurobi 13.0.1 (linux64, gurobi_cl) logging started Thu Jul 16 18:50:30 2026
+
+Set parameter Username
+Set parameter LicenseID to value 2810231
+Set parameter LogFile to value "gurobi.log"
+Using license file /home/jj/gurobi.lic
+Academic license - for non-commercial use only - expires 2027-04-18

@@ -29,13 +29,13 @@ isdefined(Main, :Instance) || include(joinpath(@__DIR__, "structs.jl"))
 const INSTANCE_CONFIGS = Dict(
     :small => (L = 500.0,  n_zones = 2:3,  n_large = 1:2, n_small = 2:4,
                n_hubs = 1, n_rti = 2:2,    n_products = 3:5,
-               max_rti_compat = 2, max_products_per_route = 2),
-    :medium => (L = 1000.0, n_zones = 4:6, n_large = 2:3, n_small = 4:8,
-               n_hubs = 2, n_rti = 3:4,    n_products = 6:10,
-               max_rti_compat = 3, max_products_per_route = 3),
-    :large => (L = 1500.0, n_zones = 8:12, n_large = 3:5, n_small = 6:12,
-               n_hubs = 3, n_rti = 4:6,    n_products = 10:20,
-               max_rti_compat = 4, max_products_per_route = 4),
+               max_rti_compat = 1, max_products_per_route = 2),
+    :medium => (L = 1000.0, n_zones = 4:5, n_large = 2:3, n_small = 4:6,
+               n_hubs = 2, n_rti = 3:4,    n_products = 5:7,
+               max_rti_compat = 2, max_products_per_route = 3),
+    :large => (L = 1500.0, n_zones = 6:7, n_large = 3:5, n_small = 6:8,
+               n_hubs = 2, n_rti = 4:6,    n_products = 7:9,
+               max_rti_compat = 3, max_products_per_route = 4),
 )
 
 VOLUME_TRUCK = 13.6 * 2.4 * 3
@@ -73,9 +73,10 @@ const PARAMS = (
     modes = [
         (name = "FTL", ρ = MAX_WEIGHT_TRUCK / VOLUME_TRUCK, qmin =0, qmax = 14.0,
          fixed_cost = 1.2, fixed_emis = 2.0,
+         minimum_fare_fixed = 200,
          cost_km_m3 = 0, emis_km_m3 = 0.10,
-         min_vol = 0.0, max_vol = VOLUME_TRUCK,      # ω / δ  (m³ per shipment)
-         min_weight = 0.0, max_weight = MAX_WEIGHT_TRUCK,      # ω / δ  (m³ per shipment)
+         min_vol = 0.75*VOLUME_TRUCK, max_vol = VOLUME_TRUCK,      # ω / δ  (m³ per shipment)
+         min_weight = 0.75*MAX_WEIGHT_TRUCK, max_weight = MAX_WEIGHT_TRUCK,      # ω / δ  (m³ per shipment)
          d_min = 0, d_max = Inf),           # FTL not offered below 50 km
         (name = "LTL", ρ =  MAX_WEIGHT_TRUCK / VOLUME_TRUCK, qmin = 0, qmax = 14.0,
          fixed_cost = 40.0, fixed_emis = 5,
@@ -136,7 +137,7 @@ const PARAMS = (
     inlay_wt_frac  = (0.05, 0.20),    # gI as fraction of RTI tare
 
     # -- hubs ---------------------------------------------------------
-    fhc_range = (50.0, 100.0),  fhe_range = (40.0, 120.0),   # /day
+    fhc_range = (0, 5.0),  fhe_range = (30.0, 40.0),   # /day
     vhc_range = (0.5, 2.0),      vhe_range = (0.08, 0.30),    # /m³
 
     # -- maintenance / loss factor (sampled per instance) -------------
@@ -278,7 +279,7 @@ function generate_instance(size::Symbol, seed::Int)::Instance
     compat = Dict{Tuple{Int,Int},Compat}()
     for pid in 1:n_products
         cand = if rand(rng) < P.frac_multi_rti && n_rti > 1
-            nc = rand(rng, 2:min(cfg.max_rti_compat, n_rti))
+            nc = rand(rng, 1:min(cfg.max_rti_compat, n_rti))
             shuffle(rng, collect(1:n_rti))[1:nc]
         else
             [rand(rng, 1:n_rti)]
@@ -342,12 +343,17 @@ function generate_instance(size::Symbol, seed::Int)::Instance
     #    A mode is offered on an arc only if d_min ≤ dist ≤ d_max
     #    (FTL not below 50 km, LTL not above 800 km).
     function arcmodes(dist;scale_costs = _u(rng, (0.8, 1.3)),
-               scale_emissions = _u(rng, (0.6, 1.6)))
+               scale_emissions = _u(rng, (0.6, 1.5)))
         d = Dict{Int,ArcMode}()
         for (mid, m) in enumerate(P.modes)
             m.d_min ≤ dist ≤ m.d_max || continue
+            if m.name == "FTL"
+              fixed_cost = max(m.minimum_fare_fixed,  m.fixed_cost *dist+ 30)
+            else 
+              fixed_cost = m.fixed_cost
+            end
             d[mid] = ArcMode(floor(dist / P.v_avg) + 1,
-                             round((m.fixed_cost *( m.name != "FTL") + m.fixed_cost * dist*( m.name == "FTL") ) * scale_costs, digits = 2),
+                             round(fixed_cost* scale_costs, digits = 2),
                              round(m.fixed_emis * scale_emissions, digits = 4),
                              round(m.cost_km_m3 * dist * scale_costs, digits = 4),   # EUR/m³
                              round(m.emis_km_m3 * dist * scale_emissions, digits = 4),   # kgCO2/m³
@@ -395,7 +401,7 @@ function generate_instance(size::Symbol, seed::Int)::Instance
             for pid in pids
                 μ = is_large ? P.μ_d + 0.5 * P.σ_d : P.μ_d
                 σ = is_large ? 0.6 * P.σ_d : P.σ_d
-                demand[pid] = max(1.0, round(rand(rng, LogNormal(μ, σ))))
+                demand[pid] = max(1.0, 16*round(rand(rng, LogNormal(μ, σ))))
             end
             # cap daily demand volume so at least one mode is feasible:
             # a shipment every q days carries q·tv m³ and must fit max_vol,
@@ -443,11 +449,21 @@ function generate_instance(size::Symbol, seed::Int)::Instance
             return
         end
         dist = round(_euclid(nodes[src], nodes[dst]), digits = 2)
-        arcs[key] = Arc(src, dst, arcmodes(dist),
-                        Dict{ProductId,Float64}(),   # no full-goods demand
-                        Dict{ProductId,Float64}(),   # ss
-                        Dict{ProductId,Float64}(),   # ser
-                        rset)
+        if nodes[src].hub != Nothing && nodes[dst].hub != Nothing 
+          arcs[key] = Arc(src, dst, arcmodes(dist, scale_costs = _u(rng, (0.7, 0.8)),
+               scale_emissions = _u(rng, (0.7, 0.8))),
+                          Dict{ProductId,Float64}(),   # no full-goods demand
+                          Dict{ProductId,Float64}(),   # ss
+                          Dict{ProductId,Float64}(),   # ser
+                          rset)
+        else
+          arcs[key] = Arc(src, dst, arcmodes(dist),
+                          Dict{ProductId,Float64}(),   # no full-goods demand
+                          Dict{ProductId,Float64}(),   # ss
+                          Dict{ProductId,Float64}(),   # ser
+                          rset)
+        end
+
     end
 
     all_rtis = Set{RTIId}(keys(rtis))
@@ -494,7 +510,7 @@ function generate_instance(size::Symbol, seed::Int)::Instance
     # end
 
     for h in hub_ids, pl in plant_ids
-        nodes[h].zone != nodes[pl].zone && continue
+        # nodes[h].zone != nodes[pl].zone && continue
         empty_arc!(h, pl, Set{RTIId}(r for r in compat_rtis(out_products[pl]) if can_receive(pl, r)))
         empty_arc!(pl, h, Set{RTIId}(r for r in compat_rtis(in_products[pl]) if can_send(pl, r)))
     end

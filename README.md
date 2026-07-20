@@ -1,3 +1,0 @@
-# Service Network for Returnable Items
-
-This repository presents a mathematical model for optimizing Returnable Transport decisions. This decisions are meant for a supply chain, where the average daily demand of products between suppliers and manufacturing plants are known for a giving planning horizon. In this sense, the model optimizes the full RTI selection for each products, the transport mode for each route and the return routes of empty RTIs. Furthermore, it contemplate the use hubs for consolidation strategies. It contemplates both economic and environmental costs. In order to analyze the optimization of costs and the computational times, we develop different instances based on real world supply chain from the automotive sector.

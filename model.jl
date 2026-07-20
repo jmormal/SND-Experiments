@@ -78,7 +78,7 @@ end
 
 function build_model(inst::Instance, optimizer;
                      objective::Symbol = :cost,
-                     verbose_names::Bool = false)
+                     verbose_names::Bool = false, one_to_one::Bool = false)
 
     # ---- q-expanded sparse index sets (NamedTuples) ------------------
     ARCMODEQ = [(i = i, j = j, m = m, q = q)
@@ -207,6 +207,18 @@ function build_model(inst::Instance, optimizer;
         sum(NE[t] * ve(t.r) for s in get0(amq_by_node_out, i)
                             for t in get0(emptyq_by_service, s)))
 
+    if one_to_one
+        emptyq_by_arcr = groupby(t -> (t.i, t.j, t.r), EMPTYQ)
+        inlayq_by_arcr = groupby(t -> (t.i, t.j, t.r), INLAYQ)
+        for ((i, j, r), fw) in groupby(t -> (t.i, t.j, t.r), FULLQ)
+            rv = get0(emptyq_by_arcr, (j, i, r))
+            iv = get0(inlayq_by_arcr, (j, i, r))
+            @constraint(model,
+                sum(NE[t] for t in rv) + sum(NI[t] for t in iv)
+                == sum(NF[t] for t in fw))
+        end
+    end
+  
     # ──────────────────────────────────────────────────────────────
     # Service selection: at most one (mode, queue) per arc
     # ──────────────────────────────────────────────────────────────
@@ -295,16 +307,18 @@ function build_model(inst::Instance, optimizer;
     # ──────────────────────────────────────────────────────────────
     for s in ARCMODEQ
         am = arc(s.i, s.j).modes[s.m]
-        c1 = @constraint(model, VS[s] >= am.min_volume * Y[s])
-        c2 = @constraint(model, VS[s] <= am.max_volume * Y[s])
-        c3 = @constraint(model, WS[s] >= am.min_weight * Y[s])
-        c4 = @constraint(model, WS[s] <= am.max_weight * Y[s])
+        # c1 = @constraint(model, VS[s] >= am.min_volume * Y[s])
+        # c2 = @constraint(model, VS[s] <= am.max_volume * Y[s])
+        # c3 = @constraint(model, ws[s] >= am.min_weight * y[s])
+        # c4 = @constraint(model, ws[s] <= am.max_weight * y[s])
+        c3 = @constraint(model, CW[s] >= am.min_weight * Y[s])
+        c4 = @constraint(model, CW[s] <= am.max_weight * Y[s])
         @constraint(model, CW[s] >= WS[s])
         @constraint(model, CW[s] >= inst.modes[s.m].ρ * VS[s])
         if verbose_names
             lbl = describe_service(inst, s)
-            set_name(c1, "vol_min[$lbl]"); set_name(c2, "vol_max[$lbl]")
-            set_name(c3, "wt_min[$lbl]");  set_name(c4, "wt_max[$lbl]")
+            # set_name(c1, "vol_min[$lbl]"); set_name(c2, "vol_max[$lbl]")
+            # set_name(c3, "wt_min[$lbl]");  set_name(c4, "wt_max[$lbl]")
         end
     end
 
@@ -328,14 +342,17 @@ function build_model(inst::Instance, optimizer;
         @constraint(model, ZEin[k] <= sum(XE[t] for t in ts))
         @constraint(model, sum(XE[t] for t in ts) <= length(ts) * ZEin[k])
     end
-    for i in keys(inst.nodes), r in keys(inst.rtis)
-        is_hub(inst.nodes[i]) && continue
-        zo = haskey(emptyq_out, (i, r)) ? ZEout[(i, r)] : 0
-        zi = haskey(emptyq_in,  (i, r)) ? ZEin[(i, r)]  : 0
-        (zo === 0 && zi === 0) && continue
-        c = @constraint(model, zo + zi <= 1)
-        verbose_names && set_name(c,
-            "no_crossdock[$(node_name(inst, i)), $(rti_name(inst, r))]")
+
+    if !one_to_one
+      for i in keys(inst.nodes), r in keys(inst.rtis)
+          is_hub(inst.nodes[i]) && continue
+          zo = haskey(emptyq_out, (i, r)) ? ZEout[(i, r)] : 0
+          zi = haskey(emptyq_in,  (i, r)) ? ZEin[(i, r)]  : 0
+          (zo === 0 && zi === 0) && continue
+          c = @constraint(model, zo + zi <= 1)
+          verbose_names && set_name(c,
+              "no_crossdock[$(node_name(inst, i)), $(rti_name(inst, r))]")
+      end
     end
 
     # ──────────────────────────────────────────────────────────────

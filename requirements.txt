@@ -1,5 +1,0 @@
-gurobipy
-pandas
-pydantic
-pyomo
-

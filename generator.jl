@@ -29,13 +29,13 @@ isdefined(Main, :Instance) || include(joinpath(@__DIR__, "structs.jl"))
 const INSTANCE_CONFIGS = Dict(
     :small => (L = 500.0,  n_zones = 2:3,  n_large = 1:2, n_small = 2:4,
                n_hubs = 1, n_rti = 2:2,    n_products = 3:5,
-               max_rti_compat = 1, max_products_per_route = 2),
+               max_rti_compat = 2, max_products_per_route = 2),
     :medium => (L = 1000.0, n_zones = 4:5, n_large = 2:3, n_small = 4:6,
-               n_hubs = 2, n_rti = 3:4,    n_products = 5:7,
-               max_rti_compat = 2, max_products_per_route = 3),
-    :large => (L = 1500.0, n_zones = 6:7, n_large = 3:5, n_small = 6:8,
+               n_hubs = 1, n_rti = 3:4,    n_products = 5:7,
+               max_rti_compat = 1, max_products_per_route = 3),
+    :large => (L = 1500.0, n_zones = 6:7, n_large = 3:4, n_small = 6:8,
                n_hubs = 2, n_rti = 4:6,    n_products = 7:9,
-               max_rti_compat = 3, max_products_per_route = 4),
+               max_rti_compat = 1, max_products_per_route = 4),
 )
 
 VOLUME_TRUCK = 13.6 * 2.4 * 3
@@ -401,7 +401,7 @@ function generate_instance(size::Symbol, seed::Int)::Instance
             for pid in pids
                 μ = is_large ? P.μ_d + 0.5 * P.σ_d : P.μ_d
                 σ = is_large ? 0.6 * P.σ_d : P.σ_d
-                demand[pid] = max(1.0, 16*round(rand(rng, LogNormal(μ, σ))))
+                demand[pid] = max(1.0, 10*round(rand(rng, LogNormal(μ, σ))))
             end
             # cap daily demand volume so at least one mode is feasible:
             # a shipment every q days carries q·tv m³ and must fit max_vol,
@@ -471,24 +471,43 @@ function generate_instance(size::Symbol, seed::Int)::Instance
     only_rti(p) = (rs = [r for r in keys(rtis) if haskey(compat, (p, r))];
                    length(rs) == 1 ? rs[1] : 0)
 
-    # Genenrate max, consume min, consume_max. Node , Rtis to quantity
+# Gen max, consume min/max per (node, rti) — NOW INCLUDING INLAYS.
+    # An incoming full flow (i→j, p, r) with ric > 0 obliges j to send
+    # ric·u RTIs back as inlays, and i to receive them. Those movements
+    # count in the model's conservation, so they must count here too.
     gen_max  = Dict{Tuple{NodeId,RTIId},Float64}()
     gen_min  = Dict{Tuple{NodeId,RTIId},Float64}()
     cons_max = Dict{Tuple{NodeId,RTIId},Float64}()
     cons_min = Dict{Tuple{NodeId,RTIId},Float64}()
+    add!(d, k, v) = (d[k] = get(d, k, 0.0) + v)
     for ((i, j), a) in arcs, (p, d) in a.demand, r in keys(rtis)
         haskey(compat, (p, r)) || continue
         u = d / compat[(p, r)].κ
         forced = only_rti(p) == r
-        gen_max[(j, r)]  = get(gen_max,  (j, r), 0.0) + u
-        cons_max[(i, r)] = get(cons_max, (i, r), 0.0) + u
-        forced && (gen_min[(j, r)]  = get(gen_min,  (j, r), 0.0) + u)
-        forced && (cons_min[(i, r)] = get(cons_min, (i, r), 0.0) + u)
+        add!(gen_max,  (j, r), u)          # j accumulates arriving RTIs
+        add!(cons_max, (i, r), u)          # i needs RTIs to pack
+        if forced
+            add!(gen_min,  (j, r), u)
+            add!(cons_min, (i, r), u)
+        end
+        # inlay obligation: outflow at j, inflow at i
+        ric_pr = compat[(p, r)].ric
+        if ric_pr > 0
+            add!(cons_max, (j, r), ric_pr * u)   # j must dispatch inlays
+            add!(gen_max,  (i, r), ric_pr * u)   # i receives them back
+            if forced
+                add!(cons_min, (j, r), ric_pr * u)
+                add!(gen_min,  (i, r), ric_pr * u)
+            end
+        end
     end
 
-    # plant n can ever have surplus / deficit of RTI r?
-    can_send(n, r)    = get(gen_max, (n, r), 0.0) > get(cons_min, (n, r), 0.0)
-    can_receive(n, r) = get(cons_max, (n, r), 0.0) > get(gen_min, (n, r), 0.0)
+    # Non-strict tests (≥): never prune a lane the solver might need
+    # just because rates balance exactly in floating point.
+    can_send(n, r)    = get(gen_max,  (n, r), 0.0) ≥ get(cons_min, (n, r), 0.0) &&
+                        get(gen_max,  (n, r), 0.0) > 0
+    can_receive(n, r) = get(cons_max, (n, r), 0.0) ≥ get(gen_min,  (n, r), 0.0) &&
+                        get(cons_max, (n, r), 0.0) > 0
     # for src in plant_ids, dst in plant_ids
     #     src == dst && continue
     #     empty_arc!(src, dst, compat_rtis(in_products[src]) ∩ compat_rtis(out_products[dst]))
@@ -510,7 +529,7 @@ function generate_instance(size::Symbol, seed::Int)::Instance
     # end
 
     for h in hub_ids, pl in plant_ids
-        # nodes[h].zone != nodes[pl].zone && continue
+        nodes[h].zone != nodes[pl].zone && continue
         empty_arc!(h, pl, Set{RTIId}(r for r in compat_rtis(out_products[pl]) if can_receive(pl, r)))
         empty_arc!(pl, h, Set{RTIId}(r for r in compat_rtis(in_products[pl]) if can_send(pl, r)))
     end

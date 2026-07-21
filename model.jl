@@ -260,11 +260,19 @@ function build_model(inst::Instance, optimizer;
         end
     end
 
-    # Empties flow-binary link (tight-ish big-M: total demand-driven flow bound)
-    Mempty = sum(d / minimum(κ(p, r) for r in keys(inst.rtis) if haskey(inst.compat, (p, r)))
-                 for a in values(inst.arcs) for (p, d) in a.demand; init = 0.0)
-    @constraint(model, [t in EMPTYQ], NE[t] <= Mempty * XE[t])
-
+    # daily RTI throughput bound per (node, r): max empties that could ever
+    # leave i (arrivals of r at i) — valid per-tuple big-M
+    Mout = Dict{Tuple{Int,Int},Float64}()
+    for a in values(inst.arcs), (p, d) in a.demand, r in keys(inst.rtis)
+        haskey(inst.compat, (p, r)) || continue
+        u = d / inst.compat[(p, r)].κ
+        Mout[(a.j, r)] = get(Mout, (a.j, r), 0.0) + u          # arrivals at j
+    end
+    # hubs relay: they can emit anything the network circulates
+    Mnet = Dict(r => sum(v for ((n, rr), v) in Mout if rr == r; init = 0.0)
+                for r in keys(inst.rtis))
+    bigM(t) = is_hub(inst.nodes[t.i]) ? Mnet[t.r] : get(Mout, (t.i, t.r), 0.0)
+    @constraint(model, [t in EMPTYQ], NE[t] <= bigM(t) * XE[t])
     # ──────────────────────────────────────────────────────────────
     # Inlay returns  (eq:inlay + XI/XF tie, aggregated over m,q)
     # ──────────────────────────────────────────────────────────────
@@ -334,16 +342,16 @@ function build_model(inst::Instance, optimizer;
     end
 
     # Non-hub nodes: no simultaneous receive & dispatch of empties of type r
-    for (k, ts) in emptyq_out
-        @constraint(model, ZEout[k] <= sum(XE[t] for t in ts))
-        @constraint(model, sum(XE[t] for t in ts) <= length(ts) * ZEout[k])
-    end
-    for (k, ts) in emptyq_in
-        @constraint(model, ZEin[k] <= sum(XE[t] for t in ts))
-        @constraint(model, sum(XE[t] for t in ts) <= length(ts) * ZEin[k])
-    end
 
-    if !one_to_one
+    if !one_to_one && false
+      for (k, ts) in emptyq_out
+          @constraint(model, ZEout[k] <= sum(XE[t] for t in ts))
+          @constraint(model, sum(XE[t] for t in ts) <= length(ts) * ZEout[k])
+      end
+      for (k, ts) in emptyq_in
+          @constraint(model, ZEin[k] <= sum(XE[t] for t in ts))
+          @constraint(model, sum(XE[t] for t in ts) <= length(ts) * ZEin[k])
+      end
       for i in keys(inst.nodes), r in keys(inst.rtis)
           is_hub(inst.nodes[i]) && continue
           zo = haskey(emptyq_out, (i, r)) ? ZEout[(i, r)] : 0

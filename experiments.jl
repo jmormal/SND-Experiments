@@ -174,16 +174,21 @@ function solve_instance(inst::Instance;
 
     gurobi = optimizer_with_attributes(
         () -> Gurobi.Optimizer(GRB_ENV),
-        "MIPGap"     => mip_gap,
+        # "MIPGap"     => mip_gap,
         "Threads"    => threads,
         "OutputFlag" => 0,
-        "TimeLimit"  => max(60.0, time_limit / n_points))  # per-subproblem cap
+        "MIPFocus"      => 1,       # prioritize finding solutions
+        "NoRelHeurTime" => 15.0,    # 15 s of no-relaxation heuristic up front
+        "Heuristics"    => 0.2,
+        "MIPGap"        => 1e-2,    # 1% is plenty for a Pareto frontier plot,
+        "TimeLimit"  => time_limit
+      )  # per-subproblem cap
 
     model = build_model(inst, () -> MOA.Optimizer(gurobi); objective = :both, one_to_one = one_to_one)
     set_attribute(model, MOA.Algorithm(), MOA.EpsilonConstraint())
     set_attribute(model, MOA.SolutionLimit(), n_points)
     set_time_limit_sec(model, time_limit)
-    set_silent(model)
+    # set_silent(model)
 
     t = @elapsed optimize!(model)
     nres = result_count(model)
